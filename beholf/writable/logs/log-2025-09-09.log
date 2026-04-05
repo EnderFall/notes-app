@@ -1,0 +1,13 @@
+CRITICAL - 2025-09-09 06:39:07 --> Error: Call to undefined function formatTanggalIndo()
+[Method: GET, Route: rapat/detail_rapat/4]
+in APPPATH/Views/rapat/detail_rapat.php on line 191.
+ 1 SYSTEMPATH/View/View.php(224): include()
+ 2 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Rapat.php(328): view()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Rapat->detail_rapat()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()

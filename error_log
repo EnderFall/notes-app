@@ -1,0 +1,85 @@
+[13-Aug-2025 02:48:50 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:50 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:50 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:55 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:55 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:55 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:55 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:55 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:55 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:55 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:55 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:55 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:55 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:57 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:57 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:57 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:57 UTC] PHP Warning:  require(/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php): Failed to open stream: No such file or directory in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[13-Aug-2025 02:48:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/permat43/cici.rplsph.my.id/EllieSecre/../app/Config/Paths.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/permat43/cici.rplsph.my.id/EllieSecre/index.php on line 51
+[28-Oct-2025 13:09:29 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/permat43/cici.rplsph.my.id/EllieSecre/beholf/app/Controllers/Transkrip.php on line 3

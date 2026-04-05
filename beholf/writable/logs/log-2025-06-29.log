@@ -1,0 +1,150 @@
+CRITICAL - 2025-06-29 11:06:47 --> Error: Call to undefined method App\Controllers\Login::logActivity()
+[Method: POST, Route: login/aksi_login]
+in APPPATH\Controllers\Login.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('H:\\My Drive\\showroom\\public\\index.php')
+CRITICAL - 2025-06-29 11:08:09 --> Error: Call to undefined method App\Controllers\Login::logActivity()
+[Method: POST, Route: login/aksi_login]
+in APPPATH\Controllers\Login.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('H:\\My Drive\\showroom\\public\\index.php')
+ERROR - 2025-06-29 15:46:12 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'showroom' in J:\My Drive\showroom\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 J:\My Drive\showroom\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'showroom', 3306, '', 0)
+#1 J:\My Drive\showroom\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 J:\My Drive\showroom\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 J:\My Drive\showroom\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 J:\My Drive\showroom\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 J:\My Drive\showroom\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 J:\My Drive\showroom\app\Controllers\Home.php(12): CodeIgniter\BaseModel->findAll()
+#7 J:\My Drive\showroom\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#8 J:\My Drive\showroom\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 J:\My Drive\showroom\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 J:\My Drive\showroom\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 J:\My Drive\showroom\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 J:\My Drive\showroom\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 J:\My Drive\showroom\system\rewrite.php(44): require_once('J:\\My Drive\\sho...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'showroom' in J:\My Drive\showroom\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 J:\My Drive\showroom\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 J:\My Drive\showroom\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 J:\My Drive\showroom\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 J:\My Drive\showroom\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 J:\My Drive\showroom\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 J:\My Drive\showroom\app\Controllers\Home.php(12): CodeIgniter\BaseModel->findAll()
+#6 J:\My Drive\showroom\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 J:\My Drive\showroom\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 J:\My Drive\showroom\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 J:\My Drive\showroom\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 J:\My Drive\showroom\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 J:\My Drive\showroom\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 J:\My Drive\showroom\system\rewrite.php(44): require_once('J:\\My Drive\\sho...')
+#13 {main}
+CRITICAL - 2025-06-29 15:46:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'showroom'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mobil`
+WHERE `status` = :status:', [...], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('J:\\My Drive\\showroom\\public\\index.php')
+ERROR - 2025-06-29 15:48:32 --> mysqli_sql_exception: Table 'showroom.mobil' doesn't exist in J:\My Drive\showroom\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 J:\My Drive\showroom\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 J:\My Drive\showroom\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 J:\My Drive\showroom\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 J:\My Drive\showroom\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 J:\My Drive\showroom\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 J:\My Drive\showroom\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 J:\My Drive\showroom\app\Controllers\Home.php(12): CodeIgniter\BaseModel->findAll()
+#7 J:\My Drive\showroom\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#8 J:\My Drive\showroom\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 J:\My Drive\showroom\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 J:\My Drive\showroom\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 J:\My Drive\showroom\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 J:\My Drive\showroom\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 J:\My Drive\showroom\system\rewrite.php(44): require_once('J:\\My Drive\\sho...')
+#14 {main}
+CRITICAL - 2025-06-29 15:48:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'showroom.mobil' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mobil`
+WHERE `status` = :status:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Home.php(12): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('J:\\My Drive\\showroom\\public\\index.php')
+CRITICAL - 2025-06-29 15:48:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'showroom.mobil' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mobil`
+WHERE `status` = \'Tersedia\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mobil`
+WHERE `status` = \'Tersedia\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mobil`
+WHERE `status` = :status:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Home.php(12): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('J:\\My Drive\\showroom\\public\\index.php')
+CRITICAL - 2025-06-29 15:48:32 --> [Caused by] mysqli_sql_exception: Table 'showroom.mobil' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `mobil`
+WHERE `status` = \'Tersedia\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mobil`
+WHERE `status` = \'Tersedia\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mobil`
+WHERE `status` = \'Tersedia\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mobil`
+WHERE `status` = :status:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Home.php(12): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('J:\\My Drive\\showroom\\public\\index.php')

@@ -1,0 +1,141 @@
+CRITICAL - 2025-09-10 03:53:11 --> CodeIgniter\Pager\Exceptions\PagerException: "bootstrap" is not a valid Pager template.
+[Method: GET, Route: rapat/detail_rapat/4]
+in SYSTEMPATH/Pager/Pager.php on line 124.
+ 1 SYSTEMPATH/Pager/Pager.php(124): CodeIgniter\Pager\Exceptions\PagerException::forInvalidTemplate()
+ 2 SYSTEMPATH/Pager/Pager.php(87): CodeIgniter\Pager\Pager->displayLinks()
+ 3 APPPATH/Views/rapat/detail_rapat.php(194): CodeIgniter\Pager\Pager->links()
+ 4 SYSTEMPATH/View/View.php(224): include('/home/permat43/cici.rplsph.my.id/EllieSecre/beholf/app/Views/rapat/detail_rapat.php')
+ 5 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 7 APPPATH/Controllers/Rapat.php(334): view()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Rapat->detail_rapat()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-09-10 03:53:55 --> CodeIgniter\Pager\Exceptions\PagerException: "default-full" is not a valid Pager template.
+[Method: GET, Route: rapat/detail_rapat/4]
+in SYSTEMPATH/Pager/Pager.php on line 124.
+ 1 SYSTEMPATH/Pager/Pager.php(124): CodeIgniter\Pager\Exceptions\PagerException::forInvalidTemplate()
+ 2 SYSTEMPATH/Pager/Pager.php(87): CodeIgniter\Pager\Pager->displayLinks()
+ 3 APPPATH/Views/rapat/detail_rapat.php(194): CodeIgniter\Pager\Pager->links()
+ 4 SYSTEMPATH/View/View.php(224): include('/home/permat43/cici.rplsph.my.id/EllieSecre/beholf/app/Views/rapat/detail_rapat.php')
+ 5 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 7 APPPATH/Controllers/Rapat.php(334): view()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Rapat->detail_rapat()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-09-10 03:53:56 --> CodeIgniter\Pager\Exceptions\PagerException: "default-full" is not a valid Pager template.
+[Method: GET, Route: rapat/detail_rapat/4]
+in SYSTEMPATH/Pager/Pager.php on line 124.
+ 1 SYSTEMPATH/Pager/Pager.php(124): CodeIgniter\Pager\Exceptions\PagerException::forInvalidTemplate()
+ 2 SYSTEMPATH/Pager/Pager.php(87): CodeIgniter\Pager\Pager->displayLinks()
+ 3 APPPATH/Views/rapat/detail_rapat.php(194): CodeIgniter\Pager\Pager->links()
+ 4 SYSTEMPATH/View/View.php(224): include('/home/permat43/cici.rplsph.my.id/EllieSecre/beholf/app/Views/rapat/detail_rapat.php')
+ 5 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 7 APPPATH/Controllers/Rapat.php(334): view()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Rapat->detail_rapat()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-09-10 03:53:57 --> CodeIgniter\Pager\Exceptions\PagerException: "default-full" is not a valid Pager template.
+[Method: GET, Route: rapat/detail_rapat/4]
+in SYSTEMPATH/Pager/Pager.php on line 124.
+ 1 SYSTEMPATH/Pager/Pager.php(124): CodeIgniter\Pager\Exceptions\PagerException::forInvalidTemplate()
+ 2 SYSTEMPATH/Pager/Pager.php(87): CodeIgniter\Pager\Pager->displayLinks()
+ 3 APPPATH/Views/rapat/detail_rapat.php(194): CodeIgniter\Pager\Pager->links()
+ 4 SYSTEMPATH/View/View.php(224): include('/home/permat43/cici.rplsph.my.id/EllieSecre/beholf/app/Views/rapat/detail_rapat.php')
+ 5 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 7 APPPATH/Controllers/Rapat.php(334): view()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Rapat->detail_rapat()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-09-10 04:58:08 --> ErrorException: Undefined variable $weeklyStats
+[Method: GET, Route: Admin]
+in APPPATH/Views/dashboard.php on line 53.
+ 1 APPPATH/Views/dashboard.php(53): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/permat43/cici.rplsph.my.id/EllieSecre/beholf/app/Views/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Admin.php(36): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-09-10 04:58:14 --> ErrorException: Undefined variable $weeklyStats
+[Method: GET, Route: Admin]
+in APPPATH/Views/dashboard.php on line 62.
+ 1 APPPATH/Views/dashboard.php(62): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/permat43/cici.rplsph.my.id/EllieSecre/beholf/app/Views/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Admin.php(36): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-09-10 05:05:11 --> ParseError: syntax error, unexpected token ";"
+[Method: GET, Route: Admin]
+in APPPATH/Views/dashboard.php on line 26.
+ 1 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Admin.php(44): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin->index()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-09-10 05:05:28 --> Error: Undefined constant "levelUser"
+[Method: GET, Route: Admin]
+in APPPATH/Views/dashboard.php on line 26.
+ 1 SYSTEMPATH/View/View.php(224): include()
+ 2 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Admin.php(44): view()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin->index()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-09-10 09:53:44 --> ParseError: syntax error, unexpected token "(", expecting identifier or variable or "{" or "$"
+[Method: GET, Route: Admin]
+in APPPATH/Controllers/Admin.php on line 47.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(885): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-09-10 09:55:10 --> ParseError: syntax error, unexpected token "(", expecting identifier or variable or "{" or "$"
+[Method: GET, Route: Admin]
+in APPPATH/Controllers/Admin.php on line 47.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(885): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()

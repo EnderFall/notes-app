@@ -1,0 +1,43 @@
+{
+  "voice": "id",
+  "name": "Indonesian",
+  "language": "id",
+  "gender": "male",
+  "variant": "default",
+  "pitch": 50,
+  "speed": 175,
+  "voicedata": {
+    "phonemes": "ipa",
+    "dictionary": {
+      "a": "a",
+      "i": "i",
+      "u": "u",
+      "e": "ə",
+      "é": "e",
+      "o": "o",
+      "b": "b",
+      "c": "tʃ",
+      "d": "d",
+      "f": "f",
+      "g": "g",
+      "h": "h",
+      "j": "dʒ",
+      "k": "k",
+      "l": "l",
+      "m": "m",
+      "n": "n",
+      "ng": "ŋ",
+      "ny": "ɲ",
+      "p": "p",
+      "q": "k",
+      "r": "r",
+      "s": "s",
+      "t": "t",
+      "v": "v",
+      "w": "w",
+      "x": "ks",
+      "y": "j",
+      "z": "z"
+    }
+  }
+}

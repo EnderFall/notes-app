@@ -1,0 +1,629 @@
+ERROR - 2025-08-04 01:10:28 --> mysqli_sql_exception: Table 'elliesecretary.user' doesn't exist in C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\Users\USER\Documents\K17514 CODES\EllieSecre\app\Controllers\Login.php(44): CodeIgniter\BaseModel->first()
+#7 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+#8 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\USER\Documents\K17514 CODES\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#14 {main}
+CRITICAL - 2025-08-04 01:10:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.user' doesn't exist
+[Method: POST, Route: login/aksi_login]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Login.php(44): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 01:10:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` = \'Ely\'
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` = \'Ely\'
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Login.php(44): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 01:10:28 --> [Caused by] mysqli_sql_exception: Table 'elliesecretary.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `user`
+WHERE `username` = \'Ely\'
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` = \'Ely\'
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` = \'Ely\'
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Login.php(44): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 01:23:10 --> ErrorException: Undefined array key "nama_user"
+[Method: POST, Route: login/aksi_login]
+in APPPATH\Controllers\Login.php on line 61.
+ 1 APPPATH\Controllers\Login.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_user"', 'C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\app\\Controllers\\Login.php', 61)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-04 01:24:37 --> mysqli_sql_exception: Table 'elliesecretary.mobil' doesn't exist in C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\USER\Documents\K17514 CODES\EllieSecre\app\Controllers\Mobil.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Mobil->index()
+#8 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+#9 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\USER\Documents\K17514 CODES\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#14 {main}
+CRITICAL - 2025-08-04 01:24:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.mobil' doesn't exist
+[Method: GET, Route: mobil]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mobil`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Mobil.php(16): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mobil->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 01:24:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.mobil' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mobil`
+WHERE `status_delete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mobil`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mobil`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Mobil.php(16): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mobil->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 01:24:37 --> [Caused by] mysqli_sql_exception: Table 'elliesecretary.mobil' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `mobil`
+WHERE `status_delete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mobil`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mobil`
+WHERE `status_delete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mobil`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Mobil.php(16): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mobil->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-04 01:24:40 --> mysqli_sql_exception: Table 'elliesecretary.pelanggan' doesn't exist in C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\USER\Documents\K17514 CODES\EllieSecre\app\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+#8 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+#9 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\USER\Documents\K17514 CODES\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#14 {main}
+CRITICAL - 2025-08-04 01:24:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.pelanggan' doesn't exist
+[Method: GET, Route: pelanggan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 01:24:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.pelanggan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 01:24:40 --> [Caused by] mysqli_sql_exception: Table 'elliesecretary.pelanggan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-04 02:35:00 --> mysqli_sql_exception: Table 'elliesecretary.mobil' doesn't exist in C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\USER\Documents\K17514 CODES\EllieSecre\app\Controllers\Katalog.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Katalog->index()
+#6 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Katalog))
+#7 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\USER\Documents\K17514 CODES\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#12 {main}
+CRITICAL - 2025-08-04 02:35:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.mobil' doesn't exist
+[Method: GET, Route: Katalog]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mobil`
+WHERE `status` = :status:', [...], false)
+ 2 APPPATH\Controllers\Katalog.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Katalog->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Katalog))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 02:35:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.mobil' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mobil`
+WHERE `status` = \'Tersedia\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mobil`
+WHERE `status` = \'Tersedia\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mobil`
+WHERE `status` = :status:', [...], false)
+ 4 APPPATH\Controllers\Katalog.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Katalog->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Katalog))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 02:35:00 --> [Caused by] mysqli_sql_exception: Table 'elliesecretary.mobil' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `mobil`
+WHERE `status` = \'Tersedia\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mobil`
+WHERE `status` = \'Tersedia\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mobil`
+WHERE `status` = \'Tersedia\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mobil`
+WHERE `status` = :status:', [...], false)
+ 5 APPPATH\Controllers\Katalog.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Katalog->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Katalog))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 02:38:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "register.php"
+[Method: GET, Route: register]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('register.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('register', [], true)
+ 3 APPPATH\Controllers\Login.php(122): view('register')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->register()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-04 09:07:32 --> mysqli_sql_exception: Duplicate entry 'TEST' for key 'username' in C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `el...', 0)
+#1 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `el...')
+#2 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `el...')
+#3 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el...', Array, false)
+#4 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\BaseModel.php(754): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\USER\Documents\K17514 CODES\EllieSecre\app\Controllers\Login.php(101): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Login->create()
+#10 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#11 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\USER\Documents\K17514 CODES\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#16 {main}
+CRITICAL - 2025-08-04 09:07:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'TEST' for key 'username'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `isApproved`) VALUES (:username:, :nomor_hp:, :email:, :password:, :level:, :isApproved:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Login.php(101): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->create()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 09:07:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'TEST' for key 'username'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `isApproved`) VALUES (\'TEST\', \'085668499103\', \'kurumidafox@gmail.com\', \'c4ca4238a0b923820dcc509a6f75849b\', \'2\', 0)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `isApproved`) VALUES (\'TEST\', \'085668499103\', \'kurumidafox@gmail.com\', \'c4ca4238a0b923820dcc509a6f75849b\', \'2\', 0)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `isApproved`) VALUES (:username:, :nomor_hp:, :email:, :password:, :level:, :isApproved:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Login.php(101): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 09:07:32 --> [Caused by] mysqli_sql_exception: Duplicate entry 'TEST' for key 'username'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `isApproved`) VALUES (\'TEST\', \'085668499103\', \'kurumidafox@gmail.com\', \'c4ca4238a0b923820dcc509a6f75849b\', \'2\', 0)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `isApproved`) VALUES (\'TEST\', \'085668499103\', \'kurumidafox@gmail.com\', \'c4ca4238a0b923820dcc509a6f75849b\', \'2\', 0)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `isApproved`) VALUES (\'TEST\', \'085668499103\', \'kurumidafox@gmail.com\', \'c4ca4238a0b923820dcc509a6f75849b\', \'2\', 0)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `isApproved`) VALUES (:username:, :nomor_hp:, :email:, :password:, :level:, :isApproved:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Login.php(101): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->create()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 09:11:38 --> Error: Class "App\Controllers\PHPMailer" not found
+[Method: POST, Route: register]
+in APPPATH\Controllers\Login.php on line 178.
+ 1 APPPATH\Controllers\Login.php(121): App\Controllers\Login->send_verification_email('kurumidafox@gmail.com', 'Kode Verifikasi Akun Anda', '
+                    <p>Halo <b>TEST</b>,</p>
+                    <p>Terima kasih telah mendaftar di sistem kami.</p>
+                    <p>Kode verifikasi Anda adalah:</p>
+                    <h2 style=\'color:#28a745;\'>686742</h2>
+                    <p>Masukkan kode ini di halaman verifikasi. Berlaku selama 10 menit.</p>
+                ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->register()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-04 09:21:27 --> mysqli_sql_exception: Duplicate entry '085668499103' for key 'nomor_hp' in C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `el...', 0)
+#1 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `el...')
+#2 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `el...')
+#3 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el...', Array, false)
+#4 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\USER\Documents\K17514 CODES\EllieSecre\app\Controllers\Login.php(110): CodeIgniter\Model->insert(Array)
+#8 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Login->register()
+#9 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\USER\Documents\K17514 CODES\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#15 {main}
+CRITICAL - 2025-08-04 09:21:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '085668499103' for key 'nomor_hp'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `divisi`, `token`, `expiry`, `isApproved`, `created_by`) VALUES (:username:, :nomor_hp:, :email:, :password:, :level:, :divisi:, :token:, :expiry:, :isApproved:, :created_by:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Login.php(110): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->register()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 09:21:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '085668499103' for key 'nomor_hp'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `divisi`, `token`, `expiry`, `isApproved`, `created_by`) VALUES (\'Ely\', \'085668499103\', \'nagisaryuu404@gmail.com\', \'c4ca4238a0b923820dcc509a6f75849b\', 2, NULL, \'419222\', \'2025-08-04 09:31:27\', 0, 2)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `divisi`, `token`, `expiry`, `isApproved`, `created_by`) VALUES (\'Ely\', \'085668499103\', \'nagisaryuu404@gmail.com\', \'c4ca4238a0b923820dcc509a6f75849b\', 2, NULL, \'419222\', \'2025-08-04 09:31:27\', 0, 2)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `divisi`, `token`, `expiry`, `isApproved`, `created_by`) VALUES (:username:, :nomor_hp:, :email:, :password:, :level:, :divisi:, :token:, :expiry:, :isApproved:, :created_by:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Login.php(110): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->register()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 09:21:27 --> [Caused by] mysqli_sql_exception: Duplicate entry '085668499103' for key 'nomor_hp'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `divisi`, `token`, `expiry`, `isApproved`, `created_by`) VALUES (\'Ely\', \'085668499103\', \'nagisaryuu404@gmail.com\', \'c4ca4238a0b923820dcc509a6f75849b\', 2, NULL, \'419222\', \'2025-08-04 09:31:27\', 0, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `divisi`, `token`, `expiry`, `isApproved`, `created_by`) VALUES (\'Ely\', \'085668499103\', \'nagisaryuu404@gmail.com\', \'c4ca4238a0b923820dcc509a6f75849b\', 2, NULL, \'419222\', \'2025-08-04 09:31:27\', 0, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `divisi`, `token`, `expiry`, `isApproved`, `created_by`) VALUES (\'Ely\', \'085668499103\', \'nagisaryuu404@gmail.com\', \'c4ca4238a0b923820dcc509a6f75849b\', 2, NULL, \'419222\', \'2025-08-04 09:31:27\', 0, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `divisi`, `token`, `expiry`, `isApproved`, `created_by`) VALUES (:username:, :nomor_hp:, :email:, :password:, :level:, :divisi:, :token:, :expiry:, :isApproved:, :created_by:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Login.php(110): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->register()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-04 09:23:18 --> mysqli_sql_exception: Duplicate entry '085668499103' for key 'nomor_hp' in C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `el...', 0)
+#1 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `el...')
+#2 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `el...')
+#3 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el...', Array, false)
+#4 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\USER\Documents\K17514 CODES\EllieSecre\app\Controllers\Login.php(110): CodeIgniter\Model->insert(Array)
+#8 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Login->register()
+#9 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\USER\Documents\K17514 CODES\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\USER\Documents\K17514 CODES\EllieSecre\system\rewrite.php(44): require_once('C:\\Users\\USER\\D...')
+#15 {main}
+CRITICAL - 2025-08-04 09:23:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '085668499103' for key 'nomor_hp'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `divisi`, `token`, `expiry`, `isApproved`, `created_by`) VALUES (:username:, :nomor_hp:, :email:, :password:, :level:, :divisi:, :token:, :expiry:, :isApproved:, :created_by:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Login.php(110): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->register()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 09:23:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '085668499103' for key 'nomor_hp'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `divisi`, `token`, `expiry`, `isApproved`, `created_by`) VALUES (\'Pak Dedi\', \'085668499103\', \'kurumidafox@gmail.com\', \'c4ca4238a0b923820dcc509a6f75849b\', 2, NULL, \'321865\', \'2025-08-04 09:33:18\', 0, 2)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `divisi`, `token`, `expiry`, `isApproved`, `created_by`) VALUES (\'Pak Dedi\', \'085668499103\', \'kurumidafox@gmail.com\', \'c4ca4238a0b923820dcc509a6f75849b\', 2, NULL, \'321865\', \'2025-08-04 09:33:18\', 0, 2)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `divisi`, `token`, `expiry`, `isApproved`, `created_by`) VALUES (:username:, :nomor_hp:, :email:, :password:, :level:, :divisi:, :token:, :expiry:, :isApproved:, :created_by:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Login.php(110): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->register()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 09:23:18 --> [Caused by] mysqli_sql_exception: Duplicate entry '085668499103' for key 'nomor_hp'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `divisi`, `token`, `expiry`, `isApproved`, `created_by`) VALUES (\'Pak Dedi\', \'085668499103\', \'kurumidafox@gmail.com\', \'c4ca4238a0b923820dcc509a6f75849b\', 2, NULL, \'321865\', \'2025-08-04 09:33:18\', 0, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `divisi`, `token`, `expiry`, `isApproved`, `created_by`) VALUES (\'Pak Dedi\', \'085668499103\', \'kurumidafox@gmail.com\', \'c4ca4238a0b923820dcc509a6f75849b\', 2, NULL, \'321865\', \'2025-08-04 09:33:18\', 0, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `divisi`, `token`, `expiry`, `isApproved`, `created_by`) VALUES (\'Pak Dedi\', \'085668499103\', \'kurumidafox@gmail.com\', \'c4ca4238a0b923820dcc509a6f75849b\', 2, NULL, \'321865\', \'2025-08-04 09:33:18\', 0, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el_user` (`username`, `nomor_hp`, `email`, `password`, `level`, `divisi`, `token`, `expiry`, `isApproved`, `created_by`) VALUES (:username:, :nomor_hp:, :email:, :password:, :level:, :divisi:, :token:, :expiry:, :isApproved:, :created_by:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Login.php(110): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->register()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 09:48:18 --> ErrorException: Undefined array key 6285668499103
+[Method: GET, Route: send-whatsapp]
+in APPPATH\Controllers\Login.php on line 232.
+ 1 APPPATH\Controllers\Login.php(232): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 6285668499103', 'C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\app\\Controllers\\Login.php', 232)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->sendWhatsAppCode()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 09:50:38 --> ErrorException: Undefined array key "otp"
+[Method: GET, Route: send-whatsapp]
+in APPPATH\Controllers\Login.php on line 238.
+ 1 APPPATH\Controllers\Login.php(238): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "otp"', 'C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\app\\Controllers\\Login.php', 238)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->sendWhatsAppCode()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 09:52:52 --> ErrorException: Undefined array key "otp"
+[Method: GET, Route: send-whatsapp]
+in APPPATH\Controllers\Login.php on line 239.
+ 1 APPPATH\Controllers\Login.php(239): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "otp"', 'C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\app\\Controllers\\Login.php', 239)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->sendWhatsAppCode()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 09:52:53 --> ErrorException: Undefined array key "otp"
+[Method: GET, Route: send-whatsapp]
+in APPPATH\Controllers\Login.php on line 239.
+ 1 APPPATH\Controllers\Login.php(239): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "otp"', 'C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\app\\Controllers\\Login.php', 239)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->sendWhatsAppCode()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 09:52:54 --> ErrorException: Undefined array key "otp"
+[Method: GET, Route: send-whatsapp]
+in APPPATH\Controllers\Login.php on line 239.
+ 1 APPPATH\Controllers\Login.php(239): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "otp"', 'C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\app\\Controllers\\Login.php', 239)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->sendWhatsAppCode()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-04 09:52:56 --> ErrorException: Undefined array key "otp"
+[Method: GET, Route: send-whatsapp]
+in APPPATH\Controllers\Login.php on line 239.
+ 1 APPPATH\Controllers\Login.php(239): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "otp"', 'C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\app\\Controllers\\Login.php', 239)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->sendWhatsAppCode()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\Documents\\K17514 CODES\\EllieSecre\\public\\index.php')

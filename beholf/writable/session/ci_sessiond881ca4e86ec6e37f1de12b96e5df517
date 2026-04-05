@@ -1,0 +1,26 @@
+__ci_last_regenerate|i:1762188688;chat_history|a:4:{i:0;a:2:{s:4:"role";s:4:"user";s:7:"content";s:22:"apa rumus phytagoras ?";}i:1;a:2:{s:4:"role";s:9:"assistant";s:7:"content";s:702:"Rumus Pythagoras, yang sering juga disebut Teorema Pythagoras, adalah rumus yang digunakan untuk menentukan panjang sisi hipotenusa dalam segitiga siku-siku. Rumus ini hanya berlaku untuk segitiga siku-siku, yaitu segitiga yang memiliki satu sudut tumpul yang berbentuk 90 derajat.
+
+Rumus Pythagoras adalah:
+
+a² + b² = c²
+
+di mana:
+- a dan b adalah panjang kedua sisi yang berhadap dengan sudut tumpul (sisi tangan),
+- c adalah panjang sisi hipotenusa (sisi yang berhadap dengan sudut tumpul dan paling panjang dari ketiga sisi).
+
+Jika Anda ingin menghitung panjang sisi hipotenusa, rumusnya adalah:
+
+c = √(a² + b²)
+
+Jika Anda ingin menghitung panjang salah satu sisi tangan, rumusnya adalah:
+
+a";}i:2;a:2:{s:4:"role";s:4:"user";s:7:"content";s:51:"ringkaskan rumusnya dalam bentuk poin saja bisakah?";}i:3;a:2:{s:4:"role";s:9:"assistant";s:7:"content";s:551:"Tentu, berikut adalah ringkasan rumus Pythagoras dalam bentuk poin:
+
+1. Rumus Pythagoras hanya berlaku untuk segitiga siku-siku.
+2. a² + b² = c², di mana:
+   - a dan b adalah panjang sisi tangan (sisi yang berhadap dengan sudut tumpul).
+   - c adalah panjang sisi hipotenusa (sisi terpanjang yang berhadap dengan sudut tumpul).
+3. Untuk menghitung panjang hipotenusa (c), gunakan:
+   c = √(a² + b²)
+4. Untuk menghitung panjang sisi tangan (a atau b), jika c dan satu sisi tangan diketahui, gunakan:
+   a = √(c² - b²) atau b = √(c² - a²)";}}error|s:15:"Password salah!";__ci_vars|a:1:{s:5:"error";s:3:"old";}

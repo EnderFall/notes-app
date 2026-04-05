@@ -1,0 +1,1500 @@
+ERROR - 2025-08-07 06:49:05 --> mysqli_sql_exception: Table 'elliesecretary.pelanggan' doesn't exist in I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 I:\My Drive\EllieSecre\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 I:\My Drive\EllieSecre\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\EllieSecre\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 I:\My Drive\EllieSecre\app\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+#7 I:\My Drive\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+#8 I:\My Drive\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+#9 I:\My Drive\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 I:\My Drive\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 I:\My Drive\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 I:\My Drive\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 I:\My Drive\EllieSecre\system\rewrite.php(44): require_once('I:\\My Drive\\Ell...')
+#14 {main}
+CRITICAL - 2025-08-07 06:49:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.pelanggan' doesn't exist
+[Method: GET, Route: pelanggan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 06:49:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.pelanggan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 06:49:05 --> [Caused by] mysqli_sql_exception: Table 'elliesecretary.pelanggan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-07 06:52:40 --> mysqli_sql_exception: Table 'elliesecretary.pelanggan' doesn't exist in I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 I:\My Drive\EllieSecre\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 I:\My Drive\EllieSecre\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\EllieSecre\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 I:\My Drive\EllieSecre\app\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+#7 I:\My Drive\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+#8 I:\My Drive\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+#9 I:\My Drive\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 I:\My Drive\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 I:\My Drive\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 I:\My Drive\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 I:\My Drive\EllieSecre\system\rewrite.php(44): require_once('I:\\My Drive\\Ell...')
+#14 {main}
+CRITICAL - 2025-08-07 06:52:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.pelanggan' doesn't exist
+[Method: GET, Route: pelanggan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 06:52:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.pelanggan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 06:52:40 --> [Caused by] mysqli_sql_exception: Table 'elliesecretary.pelanggan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-07 06:52:41 --> mysqli_sql_exception: Table 'elliesecretary.mobil' doesn't exist in I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 I:\My Drive\EllieSecre\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 I:\My Drive\EllieSecre\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\EllieSecre\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 I:\My Drive\EllieSecre\app\Controllers\Mobil.php(16): CodeIgniter\BaseModel->findAll()
+#7 I:\My Drive\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Mobil->index()
+#8 I:\My Drive\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+#9 I:\My Drive\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 I:\My Drive\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 I:\My Drive\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 I:\My Drive\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 I:\My Drive\EllieSecre\system\rewrite.php(44): require_once('I:\\My Drive\\Ell...')
+#14 {main}
+CRITICAL - 2025-08-07 06:52:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.mobil' doesn't exist
+[Method: GET, Route: mobil]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mobil`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Mobil.php(16): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mobil->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 06:52:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.mobil' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mobil`
+WHERE `status_delete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mobil`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mobil`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Mobil.php(16): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mobil->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 06:52:41 --> [Caused by] mysqli_sql_exception: Table 'elliesecretary.mobil' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `mobil`
+WHERE `status_delete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mobil`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mobil`
+WHERE `status_delete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mobil`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Mobil.php(16): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mobil->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mobil))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 07:04:24 --> Error: Class "App\Models\M_divisi" not found
+[Method: GET, Route: divisi]
+in APPPATH\Controllers\Divisi.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-07 07:05:27 --> mysqli_sql_exception: Table 'elliesecretary.divisi' doesn't exist in I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 I:\My Drive\EllieSecre\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 I:\My Drive\EllieSecre\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\EllieSecre\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 I:\My Drive\EllieSecre\app\Controllers\Divisi.php(16): CodeIgniter\BaseModel->findAll()
+#7 I:\My Drive\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Divisi->index()
+#8 I:\My Drive\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+#9 I:\My Drive\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 I:\My Drive\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 I:\My Drive\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 I:\My Drive\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 I:\My Drive\EllieSecre\system\rewrite.php(44): require_once('I:\\My Drive\\Ell...')
+#14 {main}
+CRITICAL - 2025-08-07 07:05:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.divisi' doesn't exist
+[Method: GET, Route: divisi]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `divisi`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Divisi.php(16): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 07:05:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.divisi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `divisi`
+WHERE `status_delete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `divisi`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `divisi`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Divisi.php(16): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 07:05:27 --> [Caused by] mysqli_sql_exception: Table 'elliesecretary.divisi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `divisi`
+WHERE `status_delete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `divisi`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `divisi`
+WHERE `status_delete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `divisi`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Divisi.php(16): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 07:05:49 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\M_divisi::getDeleteddivisi
+[Method: GET, Route: divisi/dihapus_divisi]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\Divisi.php(155): CodeIgniter\Model->__call('getDeleteddivisi', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->dihapus_divisi()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-07 07:07:08 --> mysqli_sql_exception: Table 'elliesecretary.divisi' doesn't exist in I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 I:\My Drive\EllieSecre\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 I:\My Drive\EllieSecre\app\Models\M_divisi.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\EllieSecre\app\Controllers\Divisi.php(155): App\Models\M_divisi->getDeletedDivisi()
+#6 I:\My Drive\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Divisi->dihapus_divisi()
+#7 I:\My Drive\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+#8 I:\My Drive\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 I:\My Drive\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 I:\My Drive\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 I:\My Drive\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 I:\My Drive\EllieSecre\system\rewrite.php(44): require_once('I:\\My Drive\\Ell...')
+#13 {main}
+CRITICAL - 2025-08-07 07:07:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.divisi' doesn't exist
+[Method: GET, Route: divisi/dihapus_divisi]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `divisi`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 2 APPPATH\Models\M_divisi.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Divisi.php(155): App\Models\M_divisi->getDeletedDivisi()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->dihapus_divisi()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 07:07:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.divisi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `divisi`
+WHERE `status_delete` = 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `divisi`
+WHERE `status_delete` = 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `divisi`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 4 APPPATH\Models\M_divisi.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Divisi.php(155): App\Models\M_divisi->getDeletedDivisi()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->dihapus_divisi()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 07:07:08 --> [Caused by] mysqli_sql_exception: Table 'elliesecretary.divisi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `divisi`
+WHERE `status_delete` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `divisi`
+WHERE `status_delete` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `divisi`
+WHERE `status_delete` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `divisi`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 5 APPPATH\Models\M_divisi.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Divisi.php(155): App\Models\M_divisi->getDeletedDivisi()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->dihapus_divisi()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 07:07:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "data/deleted_divisi.php"
+[Method: GET, Route: divisi/dihapus_divisi]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('data/deleted_divisi.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('data/deleted_divisi', [], true)
+ 3 APPPATH\Controllers\Divisi.php(161): view('data/deleted_divisi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->dihapus_divisi()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 07:14:23 --> ErrorException: Undefined property: stdClass::$status
+[Method: GET, Route: divisi]
+in APPPATH\Views\data\v_divisi.php on line 94.
+ 1 APPPATH\Views\data\v_divisi.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$status', 'I:\\My Drive\\EllieSecre\\app\\Views\\data\\v_divisi.php', 94)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\data\\v_divisi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('data/v_divisi', [], true)
+ 5 APPPATH\Controllers\Divisi.php(21): view('data/v_divisi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 07:15:04 --> ErrorException: Undefined property: stdClass::$keterangan
+[Method: GET, Route: divisi]
+in APPPATH\Views\data\v_divisi.php on line 110.
+ 1 APPPATH\Views\data\v_divisi.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$keterangan', 'I:\\My Drive\\EllieSecre\\app\\Views\\data\\v_divisi.php', 110)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\data\\v_divisi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('data/v_divisi', [], true)
+ 5 APPPATH\Controllers\Divisi.php(21): view('data/v_divisi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 07:16:08 --> ErrorException: Undefined property: stdClass::$status
+[Method: GET, Route: divisi]
+in APPPATH\Views\data\v_divisi.php on line 95.
+ 1 APPPATH\Views\data\v_divisi.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$status', 'I:\\My Drive\\EllieSecre\\app\\Views\\data\\v_divisi.php', 95)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\data\\v_divisi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('data/v_divisi', [], true)
+ 5 APPPATH\Controllers\Divisi.php(21): view('data/v_divisi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 07:16:49 --> ErrorException: Undefined property: stdClass::$foto_mobil
+[Method: GET, Route: divisi]
+in APPPATH\Views\data\v_divisi.php on line 109.
+ 1 APPPATH\Views\data\v_divisi.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$foto_mobil', 'I:\\My Drive\\EllieSecre\\app\\Views\\data\\v_divisi.php', 109)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\data\\v_divisi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('data/v_divisi', [], true)
+ 5 APPPATH\Controllers\Divisi.php(21): view('data/v_divisi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 07:17:45 --> ErrorException: Undefined variable $mobil
+[Method: GET, Route: divisi/detail_divisi/1]
+in APPPATH\Views\data\detail_divisi.php on line 22.
+ 1 APPPATH\Views\data\detail_divisi.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mobil', 'I:\\My Drive\\EllieSecre\\app\\Views\\data\\detail_divisi.php', 22)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\data\\detail_divisi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('data/detail_divisi', [], true)
+ 5 APPPATH\Controllers\Divisi.php(191): view('data/detail_divisi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->detail_divisi('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 07:18:03 --> ErrorException: Undefined property: stdClass::$foto_divisi
+[Method: GET, Route: divisi/edit_divisi/1]
+in APPPATH\Views\data\edit_divisi.php on line 46.
+ 1 APPPATH\Views\data\edit_divisi.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$foto_divisi', 'I:\\My Drive\\EllieSecre\\app\\Views\\data\\edit_divisi.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\data\\edit_divisi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('data/edit_divisi', [], true)
+ 5 APPPATH\Controllers\Divisi.php(62): view('data/edit_divisi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->edit_divisi('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-07 07:42:06 --> mysqli_sql_exception: Table 'elliesecretary.pelanggan' doesn't exist in I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 I:\My Drive\EllieSecre\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 I:\My Drive\EllieSecre\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\EllieSecre\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 I:\My Drive\EllieSecre\app\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+#7 I:\My Drive\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+#8 I:\My Drive\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+#9 I:\My Drive\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 I:\My Drive\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 I:\My Drive\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 I:\My Drive\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 I:\My Drive\EllieSecre\system\rewrite.php(44): require_once('I:\\My Drive\\Ell...')
+#14 {main}
+CRITICAL - 2025-08-07 07:42:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.pelanggan' doesn't exist
+[Method: GET, Route: pelanggan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 07:42:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.pelanggan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 07:42:06 --> [Caused by] mysqli_sql_exception: Table 'elliesecretary.pelanggan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-07 07:57:07 --> mysqli_sql_exception: Table 'elliesecretary.pelanggan' doesn't exist in I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 I:\My Drive\EllieSecre\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 I:\My Drive\EllieSecre\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\EllieSecre\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 I:\My Drive\EllieSecre\app\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+#7 I:\My Drive\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+#8 I:\My Drive\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+#9 I:\My Drive\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 I:\My Drive\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 I:\My Drive\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 I:\My Drive\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 I:\My Drive\EllieSecre\system\rewrite.php(44): require_once('I:\\My Drive\\Ell...')
+#14 {main}
+CRITICAL - 2025-08-07 07:57:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.pelanggan' doesn't exist
+[Method: GET, Route: pelanggan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 07:57:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.pelanggan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 07:57:07 --> [Caused by] mysqli_sql_exception: Table 'elliesecretary.pelanggan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-07 08:01:12 --> mysqli_sql_exception: Table 'elliesecretary.pelanggan' doesn't exist in I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 I:\My Drive\EllieSecre\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 I:\My Drive\EllieSecre\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\EllieSecre\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 I:\My Drive\EllieSecre\app\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+#7 I:\My Drive\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+#8 I:\My Drive\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+#9 I:\My Drive\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 I:\My Drive\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 I:\My Drive\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 I:\My Drive\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 I:\My Drive\EllieSecre\system\rewrite.php(44): require_once('I:\\My Drive\\Ell...')
+#14 {main}
+CRITICAL - 2025-08-07 08:01:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.pelanggan' doesn't exist
+[Method: GET, Route: pelanggan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:01:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.pelanggan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:01:12 --> [Caused by] mysqli_sql_exception: Table 'elliesecretary.pelanggan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pelanggan`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pelanggan.php(16): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pelanggan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:11:11 --> ErrorException: Undefined property: stdClass::$nama_user
+[Method: GET, Route: user/dihapus_user]
+in APPPATH\Views\user\deleted_user.php on line 39.
+ 1 APPPATH\Views\user\deleted_user.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_user', 'I:\\My Drive\\EllieSecre\\app\\Views\\user\\deleted_user.php', 39)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\user\\deleted_user.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/deleted_user', [], true)
+ 5 APPPATH\Controllers\User.php(117): view('user/deleted_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->dihapus_user()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:11:51 --> ErrorException: Undefined variable $b
+[Method: GET, Route: user/dihapus_user]
+in APPPATH\Views\user\deleted_user.php on line 42.
+ 1 APPPATH\Views\user\deleted_user.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $b', 'I:\\My Drive\\EllieSecre\\app\\Views\\user\\deleted_user.php', 42)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\user\\deleted_user.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/deleted_user', [], true)
+ 5 APPPATH\Controllers\User.php(117): view('user/deleted_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->dihapus_user()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-07 08:20:36 --> mysqli_sql_exception: Table 'elliesecretary.penjualan' doesn't exist in I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `penjual...', 0)
+#1 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penjual...')
+#2 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penjual...')
+#3 I:\My Drive\EllieSecre\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `penjual...', Array, false)
+#4 I:\My Drive\EllieSecre\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\EllieSecre\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 I:\My Drive\EllieSecre\app\Controllers\Penjualan.php(48): CodeIgniter\BaseModel->findAll()
+#7 I:\My Drive\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+#8 I:\My Drive\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+#9 I:\My Drive\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 I:\My Drive\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 I:\My Drive\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 I:\My Drive\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 I:\My Drive\EllieSecre\system\rewrite.php(44): require_once('I:\\My Drive\\Ell...')
+#14 {main}
+CRITICAL - 2025-08-07 08:20:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.penjualan' doesn't exist
+[Method: GET, Route: penjualan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = :penjualan.status_delete:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Penjualan.php(48): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:20:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.penjualan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = :penjualan.status_delete:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Penjualan.php(48): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:20:36 --> [Caused by] mysqli_sql_exception: Table 'elliesecretary.penjualan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = :penjualan.status_delete:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Penjualan.php(48): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-07 08:20:42 --> mysqli_sql_exception: Table 'elliesecretary.penjualan' doesn't exist in I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `penjual...', 0)
+#1 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penjual...')
+#2 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penjual...')
+#3 I:\My Drive\EllieSecre\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `penjual...', Array, false)
+#4 I:\My Drive\EllieSecre\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\EllieSecre\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 I:\My Drive\EllieSecre\app\Controllers\Penjualan.php(48): CodeIgniter\BaseModel->findAll()
+#7 I:\My Drive\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+#8 I:\My Drive\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+#9 I:\My Drive\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 I:\My Drive\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 I:\My Drive\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 I:\My Drive\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 I:\My Drive\EllieSecre\system\rewrite.php(44): require_once('I:\\My Drive\\Ell...')
+#14 {main}
+CRITICAL - 2025-08-07 08:20:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.penjualan' doesn't exist
+[Method: GET, Route: penjualan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = :penjualan.status_delete:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Penjualan.php(48): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:20:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.penjualan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = :penjualan.status_delete:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Penjualan.php(48): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:20:42 --> [Caused by] mysqli_sql_exception: Table 'elliesecretary.penjualan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = :penjualan.status_delete:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Penjualan.php(48): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:21:02 --> ErrorException: Undefined variable $pelanggan
+[Method: GET, Route: user/detail_user/17]
+in APPPATH\Views\user\detail_user.php on line 20.
+ 1 APPPATH\Views\user\detail_user.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pelanggan', 'I:\\My Drive\\EllieSecre\\app\\Views\\user\\detail_user.php', 20)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\user\\detail_user.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/detail_user', [], true)
+ 5 APPPATH\Controllers\User.php(173): view('user/detail_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->detail_user('17')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:21:42 --> ErrorException: Undefined property: stdClass::$nama_user
+[Method: GET, Route: user/detail_user/17]
+in APPPATH\Views\user\detail_user.php on line 20.
+ 1 APPPATH\Views\user\detail_user.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_user', 'I:\\My Drive\\EllieSecre\\app\\Views\\user\\detail_user.php', 20)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\user\\detail_user.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/detail_user', [], true)
+ 5 APPPATH\Controllers\User.php(173): view('user/detail_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->detail_user('17')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:22:25 --> ErrorException: Undefined property: stdClass::$nama_user
+[Method: GET, Route: user/detail_user/17]
+in APPPATH\Views\user\detail_user.php on line 20.
+ 1 APPPATH\Views\user\detail_user.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_user', 'I:\\My Drive\\EllieSecre\\app\\Views\\user\\detail_user.php', 20)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\user\\detail_user.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/detail_user', [], true)
+ 5 APPPATH\Controllers\User.php(173): view('user/detail_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->detail_user('17')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:22:46 --> ErrorException: Undefined property: stdClass::$nama_user
+[Method: GET, Route: user/detail_user/17]
+in APPPATH\Views\user\detail_user.php on line 20.
+ 1 APPPATH\Views\user\detail_user.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_user', 'I:\\My Drive\\EllieSecre\\app\\Views\\user\\detail_user.php', 20)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\user\\detail_user.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/detail_user', [], true)
+ 5 APPPATH\Controllers\User.php(173): view('user/detail_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->detail_user('17')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:22:51 --> ErrorException: Undefined property: stdClass::$nama_user
+[Method: GET, Route: user/detail_user/17]
+in APPPATH\Views\user\detail_user.php on line 20.
+ 1 APPPATH\Views\user\detail_user.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_user', 'I:\\My Drive\\EllieSecre\\app\\Views\\user\\detail_user.php', 20)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\user\\detail_user.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/detail_user', [], true)
+ 5 APPPATH\Controllers\User.php(173): view('user/detail_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->detail_user('17')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:23:11 --> ErrorException: Undefined variable $pelanggan
+[Method: GET, Route: user/edit_user/17]
+in APPPATH\Views\user\edit_user.php on line 34.
+ 1 APPPATH\Views\user\edit_user.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pelanggan', 'I:\\My Drive\\EllieSecre\\app\\Views\\user\\edit_user.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\user\\edit_user.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/edit_user', [], true)
+ 5 APPPATH\Controllers\User.php(67): view('user/edit_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->edit_user('17')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:31:56 --> ErrorException: Attempt to read property "level" on array
+[Method: GET, Route: user]
+in APPPATH\Views\user\v_user.php on line 69.
+ 1 APPPATH\Views\user\v_user.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "level" on array', 'I:\\My Drive\\EllieSecre\\app\\Views\\user\\v_user.php', 69)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\user\\v_user.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/v_user', [], true)
+ 5 APPPATH\Controllers\User.php(22): view('user/v_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:50:06 --> ErrorException: Undefined variable $level
+[Method: GET, Route: user/edit_user/21]
+in APPPATH\Views\user\edit_user.php on line 69.
+ 1 APPPATH\Views\user\edit_user.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $level', 'I:\\My Drive\\EllieSecre\\app\\Views\\user\\edit_user.php', 69)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\user\\edit_user.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/edit_user', [], true)
+ 5 APPPATH\Controllers\User.php(75): view('user/edit_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->edit_user('21')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-07 08:52:16 --> mysqli_sql_exception: Duplicate entry 'test' for key 'username' in I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `el...', 0)
+#1 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `el...')
+#2 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `el...')
+#3 I:\My Drive\EllieSecre\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el...', Array, false)
+#4 I:\My Drive\EllieSecre\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 I:\My Drive\EllieSecre\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 I:\My Drive\EllieSecre\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 I:\My Drive\EllieSecre\app\Controllers\User.php(58): CodeIgniter\Model->insert(Array)
+#8 I:\My Drive\EllieSecre\system\CodeIgniter.php(933): App\Controllers\User->aksi_tambah_user()
+#9 I:\My Drive\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 I:\My Drive\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 I:\My Drive\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 I:\My Drive\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 I:\My Drive\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 I:\My Drive\EllieSecre\system\rewrite.php(44): require_once('I:\\My Drive\\Ell...')
+#15 {main}
+CRITICAL - 2025-08-07 08:52:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'test' for key 'username'
+[Method: POST, Route: user/simpan_user]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el_user` (`username`, `password`, `nomor_hp`, `email`, `level`, `created_at`) VALUES (:username:, :password:, :nomor_hp:, :email:, :level:, :created_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\User.php(58): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->aksi_tambah_user()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:52:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'test' for key 'username'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `el_user` (`username`, `password`, `nomor_hp`, `email`, `level`, `created_at`) VALUES (\'test\', \'098f6bcd4621d373cade4e832627b4f6\', \'123123\', \'tset\', \'1\', \'2025-08-07 08:52:15\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `el_user` (`username`, `password`, `nomor_hp`, `email`, `level`, `created_at`) VALUES (\'test\', \'098f6bcd4621d373cade4e832627b4f6\', \'123123\', \'tset\', \'1\', \'2025-08-07 08:52:15\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el_user` (`username`, `password`, `nomor_hp`, `email`, `level`, `created_at`) VALUES (:username:, :password:, :nomor_hp:, :email:, :level:, :created_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\User.php(58): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->aksi_tambah_user()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:52:16 --> [Caused by] mysqli_sql_exception: Duplicate entry 'test' for key 'username'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `el_user` (`username`, `password`, `nomor_hp`, `email`, `level`, `created_at`) VALUES (\'test\', \'098f6bcd4621d373cade4e832627b4f6\', \'123123\', \'tset\', \'1\', \'2025-08-07 08:52:15\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `el_user` (`username`, `password`, `nomor_hp`, `email`, `level`, `created_at`) VALUES (\'test\', \'098f6bcd4621d373cade4e832627b4f6\', \'123123\', \'tset\', \'1\', \'2025-08-07 08:52:15\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `el_user` (`username`, `password`, `nomor_hp`, `email`, `level`, `created_at`) VALUES (\'test\', \'098f6bcd4621d373cade4e832627b4f6\', \'123123\', \'tset\', \'1\', \'2025-08-07 08:52:15\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el_user` (`username`, `password`, `nomor_hp`, `email`, `level`, `created_at`) VALUES (:username:, :password:, :nomor_hp:, :email:, :level:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(58): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->aksi_tambah_user()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-07 08:52:27 --> mysqli_sql_exception: Duplicate entry '123123' for key 'nomor_hp' in I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `el...', 0)
+#1 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `el...')
+#2 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `el...')
+#3 I:\My Drive\EllieSecre\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el...', Array, false)
+#4 I:\My Drive\EllieSecre\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 I:\My Drive\EllieSecre\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 I:\My Drive\EllieSecre\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 I:\My Drive\EllieSecre\app\Controllers\User.php(58): CodeIgniter\Model->insert(Array)
+#8 I:\My Drive\EllieSecre\system\CodeIgniter.php(933): App\Controllers\User->aksi_tambah_user()
+#9 I:\My Drive\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 I:\My Drive\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 I:\My Drive\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 I:\My Drive\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 I:\My Drive\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 I:\My Drive\EllieSecre\system\rewrite.php(44): require_once('I:\\My Drive\\Ell...')
+#15 {main}
+CRITICAL - 2025-08-07 08:52:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '123123' for key 'nomor_hp'
+[Method: POST, Route: user/simpan_user]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el_user` (`username`, `password`, `nomor_hp`, `email`, `level`, `created_at`) VALUES (:username:, :password:, :nomor_hp:, :email:, :level:, :created_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\User.php(58): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->aksi_tambah_user()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:52:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '123123' for key 'nomor_hp'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `el_user` (`username`, `password`, `nomor_hp`, `email`, `level`, `created_at`) VALUES (\'2341\', \'098f6bcd4621d373cade4e832627b4f6\', \'123123\', \'tset\', \'1\', \'2025-08-07 08:52:27\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `el_user` (`username`, `password`, `nomor_hp`, `email`, `level`, `created_at`) VALUES (\'2341\', \'098f6bcd4621d373cade4e832627b4f6\', \'123123\', \'tset\', \'1\', \'2025-08-07 08:52:27\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el_user` (`username`, `password`, `nomor_hp`, `email`, `level`, `created_at`) VALUES (:username:, :password:, :nomor_hp:, :email:, :level:, :created_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\User.php(58): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->aksi_tambah_user()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 08:52:27 --> [Caused by] mysqli_sql_exception: Duplicate entry '123123' for key 'nomor_hp'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `el_user` (`username`, `password`, `nomor_hp`, `email`, `level`, `created_at`) VALUES (\'2341\', \'098f6bcd4621d373cade4e832627b4f6\', \'123123\', \'tset\', \'1\', \'2025-08-07 08:52:27\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `el_user` (`username`, `password`, `nomor_hp`, `email`, `level`, `created_at`) VALUES (\'2341\', \'098f6bcd4621d373cade4e832627b4f6\', \'123123\', \'tset\', \'1\', \'2025-08-07 08:52:27\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `el_user` (`username`, `password`, `nomor_hp`, `email`, `level`, `created_at`) VALUES (\'2341\', \'098f6bcd4621d373cade4e832627b4f6\', \'123123\', \'tset\', \'1\', \'2025-08-07 08:52:27\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `el_user` (`username`, `password`, `nomor_hp`, `email`, `level`, `created_at`) VALUES (:username:, :password:, :nomor_hp:, :email:, :level:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(58): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->aksi_tambah_user()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 09:01:12 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: divisi/delete_divisi/1]
+in SYSTEMPATH\BaseModel.php on line 1014.
+ 1 SYSTEMPATH\BaseModel.php(1014): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Models\M_divisi.php(16): CodeIgniter\Model->update('1', [...])
+ 4 APPPATH\Controllers\Divisi.php(125): App\Models\M_divisi->softDelete('1')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->delete_divisi('1')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 09:03:50 --> ErrorException: Undefined property: stdClass::$harga_divisi
+[Method: GET, Route: divisi/dihapus_divisi]
+in APPPATH\Views\data\deleted_divisi.php on line 37.
+ 1 APPPATH\Views\data\deleted_divisi.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$harga_divisi', 'I:\\My Drive\\EllieSecre\\app\\Views\\data\\deleted_divisi.php', 37)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\data\\deleted_divisi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('data/deleted_divisi', [], true)
+ 5 APPPATH\Controllers\Divisi.php(107): view('data/deleted_divisi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->dihapus_divisi()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 09:04:05 --> ErrorException: Undefined property: stdClass::$harga_divisi
+[Method: GET, Route: divisi/dihapus_divisi]
+in APPPATH\Views\data\deleted_divisi.php on line 37.
+ 1 APPPATH\Views\data\deleted_divisi.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$harga_divisi', 'I:\\My Drive\\EllieSecre\\app\\Views\\data\\deleted_divisi.php', 37)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\data\\deleted_divisi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('data/deleted_divisi', [], true)
+ 5 APPPATH\Controllers\Divisi.php(107): view('data/deleted_divisi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Divisi->dihapus_divisi()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Divisi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-07 09:05:44 --> mysqli_sql_exception: Unknown column 'status_delete' in 'where clause' in I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 I:\My Drive\EllieSecre\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 I:\My Drive\EllieSecre\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\EllieSecre\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 I:\My Drive\EllieSecre\app\Controllers\Level.php(16): CodeIgniter\BaseModel->findAll()
+#7 I:\My Drive\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Level->index()
+#8 I:\My Drive\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Level))
+#9 I:\My Drive\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 I:\My Drive\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 I:\My Drive\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 I:\My Drive\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 I:\My Drive\EllieSecre\system\rewrite.php(44): require_once('I:\\My Drive\\Ell...')
+#14 {main}
+CRITICAL - 2025-08-07 09:05:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_delete' in 'where clause'
+[Method: GET, Route: level]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `el_level`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Level.php(16): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Level->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Level))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 09:05:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_delete' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `el_level`
+WHERE `status_delete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `el_level`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `el_level`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Level.php(16): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Level->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Level))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 09:05:44 --> [Caused by] mysqli_sql_exception: Unknown column 'status_delete' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `el_level`
+WHERE `status_delete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `el_level`
+WHERE `status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `el_level`
+WHERE `status_delete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `el_level`
+WHERE `status_delete` = :status_delete:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Level.php(16): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Level->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Level))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 09:06:14 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: level/delete_level/49]
+in SYSTEMPATH\BaseModel.php on line 1014.
+ 1 SYSTEMPATH\BaseModel.php(1014): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Models\M_level.php(16): CodeIgniter\Model->update('49', [...])
+ 4 APPPATH\Controllers\Level.php(125): App\Models\M_level->softDelete('49')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Level->delete_level('49')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Level))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 09:06:29 --> ErrorException: Undefined property: stdClass::$harga_level
+[Method: GET, Route: level/dihapus_level]
+in APPPATH\Views\level\deleted_level.php on line 37.
+ 1 APPPATH\Views\level\deleted_level.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$harga_level', 'I:\\My Drive\\EllieSecre\\app\\Views\\level\\deleted_level.php', 37)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\level\\deleted_level.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('level/deleted_level', [], true)
+ 5 APPPATH\Controllers\Level.php(107): view('level/deleted_level', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Level->dihapus_level()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Level))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 09:43:08 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\M_rapat::getRapatById
+[Method: GET, Route: rapat/detail_rapat/1]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\Rapat.php(181): CodeIgniter\Model->__call('getRapatById', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rapat->detail_rapat('1')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rapat))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 09:45:04 --> ErrorException: Undefined variable $b
+[Method: GET, Route: rapat/dihapus_rapat]
+in APPPATH\Views\rapat\deleted_rapat.php on line 42.
+ 1 APPPATH\Views\rapat\deleted_rapat.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $b', 'I:\\My Drive\\EllieSecre\\app\\Views\\rapat\\deleted_rapat.php', 42)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\rapat\\deleted_rapat.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('rapat/deleted_rapat', [], true)
+ 5 APPPATH\Controllers\Rapat.php(136): view('rapat/deleted_rapat', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rapat->dihapus_rapat()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rapat))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-07 09:45:51 --> mysqli_sql_exception: Table 'elliesecretary.penjualan' doesn't exist in I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `penjual...', 0)
+#1 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penjual...')
+#2 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penjual...')
+#3 I:\My Drive\EllieSecre\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `penjual...', Array, false)
+#4 I:\My Drive\EllieSecre\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\EllieSecre\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 I:\My Drive\EllieSecre\app\Controllers\Penjualan.php(48): CodeIgniter\BaseModel->findAll()
+#7 I:\My Drive\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+#8 I:\My Drive\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+#9 I:\My Drive\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 I:\My Drive\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 I:\My Drive\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 I:\My Drive\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 I:\My Drive\EllieSecre\system\rewrite.php(44): require_once('I:\\My Drive\\Ell...')
+#14 {main}
+CRITICAL - 2025-08-07 09:45:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.penjualan' doesn't exist
+[Method: GET, Route: penjualan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = :penjualan.status_delete:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Penjualan.php(48): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 09:45:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.penjualan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = :penjualan.status_delete:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Penjualan.php(48): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 09:45:51 --> [Caused by] mysqli_sql_exception: Table 'elliesecretary.penjualan' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `penjualan`.*, `mobil`.`nama_mobil`, `mobil`.`kode_mobil`, `mobil`.`plat_mobil`, `pelanggan`.`nama_pelanggan`
+FROM `penjualan`
+JOIN `mobil` ON `mobil`.`id_mobil` = `penjualan`.`id_mobil`
+JOIN `pelanggan` ON `pelanggan`.`id_pelanggan` = `penjualan`.`id_pelanggan`
+WHERE `penjualan`.`status_delete` = :penjualan.status_delete:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Penjualan.php(48): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-07 09:52:09 --> ErrorException: Undefined variable $rapat
+[Method: GET, Route: user/edit_user/17]
+in APPPATH\Views\user\edit_user.php on line 81.
+ 1 APPPATH\Views\user\edit_user.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rapat', 'I:\\My Drive\\EllieSecre\\app\\Views\\user\\edit_user.php', 81)
+ 2 SYSTEMPATH\View\View.php(224): include('I:\\My Drive\\EllieSecre\\app\\Views\\user\\edit_user.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/edit_user', [], true)
+ 5 APPPATH\Controllers\User.php(81): view('user/edit_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->edit_user('17')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')

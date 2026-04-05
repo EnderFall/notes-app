@@ -1,0 +1,7 @@
+ERROR - 2025-08-23 10:35:09 --> Email gagal dikirim: SMTP Error: Could not connect to SMTP host. Connection failed. stream_socket_enable_crypto(): Peer certificate CN=`ipv6.kanigoro.idweb.host' did not match expected CN=`smtp.gmail.com' SMTP server error: QUIT command failed Detail: 2ýGÇêªó^utSò<YW
+221 kanigoro.idweb.host closing connection
+
+ERROR - 2025-08-23 10:39:22 --> Email gagal dikirim: SMTP Error: Could not connect to SMTP host. Connection failed. stream_socket_enable_crypto(): Peer certificate CN=`ipv6.kanigoro.idweb.host' did not match expected CN=`smtp.gmail.com' SMTP server error: QUIT command failed Detail: |ÉÀ/´k$8µ•Èáƒñ221 kanigoro.idweb.host closing connection
+
+ERROR - 2025-08-23 10:42:48 --> Email gagal dikirim: SMTP Error: Could not connect to SMTP host. Connection failed. stream_socket_enable_crypto(): Peer certificate CN=`ipv6.kanigoro.idweb.host' did not match expected CN=`smtp.gmail.com' SMTP server error: QUIT command failed Detail: #@±›¯uß¦9æèë¡a221 kanigoro.idweb.host closing connection
+

@@ -1,0 +1,32 @@
+ERROR - 2025-10-28 05:40:07 --> File upload failed: CodeIgniter\HTTP\Files\UploadedFile Object
+(
+    [size:protected] => 0
+    [originalMimeType:protected] => 
+    [path:protected] => 
+    [clientPath:protected] => 
+    [originalName:protected] => 
+    [name:protected] => 
+    [error:protected] => 4
+    [hasMoved:protected] => 
+    [pathName:SplFileInfo:private] => 
+    [fileName:SplFileInfo:private] => 
+)
+
+ERROR - 2025-10-28 05:48:46 --> File upload failed: CodeIgniter\HTTP\Files\UploadedFile Object
+(
+    [size:protected] => 0
+    [originalMimeType:protected] => 
+    [path:protected] => 
+    [clientPath:protected] => 
+    [originalName:protected] => 
+    [name:protected] => 
+    [error:protected] => 4
+    [hasMoved:protected] => 
+    [pathName:SplFileInfo:private] => 
+    [fileName:SplFileInfo:private] => 
+)
+
+CRITICAL - 2025-10-28 13:09:29 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+[Method: GET, Route: transkrip/view/34]
+in APPPATH/Controllers/Transkrip.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

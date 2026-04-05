@@ -1,0 +1,55 @@
+CRITICAL - 2025-09-04 06:52:32 --> Error: Call to undefined method App\Controllers\Transkrip::callWhisperAPI()
+[Method: POST, Route: transkrip/upload]
+in APPPATH/Controllers/Transkrip.php on line 33.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Transkrip->upload()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-09-04 06:54:03 --> Error: Call to undefined method App\Controllers\Transkrip::callWhisperAPI()
+[Method: POST, Route: transkrip/upload]
+in APPPATH/Controllers/Transkrip.php on line 33.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Transkrip->upload()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-09-04 08:12:29 --> ErrorException: Undefined variable $id_transkrip_rapat
+[Method: POST, Route: transkrip/upload]
+in APPPATH/Views/transkrip/v_transkrip.php on line 6.
+ 1 APPPATH/Views/transkrip/v_transkrip.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/permat43/cici.rplsph.my.id/EllieSecre/beholf/app/Views/transkrip/v_transkrip.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Transkrip.php(58): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Transkrip->upload()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-09-04 08:12:56 --> ErrorException: Undefined variable $id_transkrip_rapat
+[Method: POST, Route: transkrip/upload]
+in APPPATH/Views/transkrip/v_transkrip.php on line 6.
+ 1 APPPATH/Views/transkrip/v_transkrip.php(6): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/permat43/cici.rplsph.my.id/EllieSecre/beholf/app/Views/transkrip/v_transkrip.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Transkrip.php(58): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Transkrip->upload()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-09-04 09:33:51 --> Error: Call to a member function isValid() on null
+[Method: POST, Route: transkrip/upload]
+in APPPATH/Controllers/Transkrip.php on line 38.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Transkrip->upload()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()

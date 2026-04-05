@@ -1,0 +1,140 @@
+CRITICAL - 2025-08-11 07:21:44 --> ErrorException: Undefined array key "nama"
+[Method: GET, Route: rapat/get_peserta/1]
+in APPPATH\Controllers\Rapat.php on line 131.
+ 1 APPPATH\Controllers\Rapat.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'I:\\My Drive\\EllieSecre\\app\\Controllers\\Rapat.php', 131)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rapat->get_peserta('1')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rapat))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-11 07:29:51 --> ErrorException: Undefined array key "nama"
+[Method: GET, Route: rapat/get_peserta/1]
+in APPPATH\Controllers\Rapat.php on line 151.
+ 1 APPPATH\Controllers\Rapat.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'I:\\My Drive\\EllieSecre\\app\\Controllers\\Rapat.php', 151)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rapat->get_peserta('1')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rapat))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-11 07:35:18 --> Error: Class "App\Models\UserModel" not found
+[Method: GET, Route: rapat/get_peserta/1]
+in APPPATH\Controllers\Rapat.php on line 116.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rapat->get_peserta('1')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rapat))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-11 08:07:23 --> Error: Class "App\Controllers\M_peserta" not found
+[Method: GET, Route: rapat/detail_rapat/1]
+in APPPATH\Controllers\Rapat.php on line 313.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rapat->detail_rapat('1')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rapat))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+ERROR - 2025-08-11 08:07:42 --> mysqli_sql_exception: Table 'elliesecretary.user' doesn't exist in I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\EllieSecre\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `user`.`...', 0)
+#1 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user`.`...')
+#2 I:\My Drive\EllieSecre\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user`.`...')
+#3 I:\My Drive\EllieSecre\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `user`.`...', Array, false)
+#4 I:\My Drive\EllieSecre\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\EllieSecre\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 I:\My Drive\EllieSecre\app\Models\M_peserta.php(61): CodeIgniter\BaseModel->findAll()
+#7 I:\My Drive\EllieSecre\app\Controllers\Rapat.php(316): App\Models\M_peserta->getPesertaByRapat('1')
+#8 I:\My Drive\EllieSecre\system\CodeIgniter.php(933): App\Controllers\Rapat->detail_rapat('1')
+#9 I:\My Drive\EllieSecre\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rapat))
+#10 I:\My Drive\EllieSecre\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 I:\My Drive\EllieSecre\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 I:\My Drive\EllieSecre\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 I:\My Drive\EllieSecre\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 I:\My Drive\EllieSecre\system\rewrite.php(44): require_once('I:\\My Drive\\Ell...')
+#15 {main}
+CRITICAL - 2025-08-11 08:07:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.user' doesn't exist
+[Method: GET, Route: rapat/detail_rapat/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `user`.`username`, `divisi`.`nama_divisi`
+FROM `el_peserta`
+JOIN `user` ON `user`.`id_user` = `peserta`.`id_user`
+LEFT JOIN `divisi` ON `divisi`.`id_divisi` = `user`.`divisi`
+WHERE `peserta`.`id_rapat` = :peserta.id_rapat:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\M_peserta.php(61): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Rapat.php(316): App\Models\M_peserta->getPesertaByRapat('1')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rapat->detail_rapat('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rapat))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-11 08:07:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'elliesecretary.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user`.`username`, `divisi`.`nama_divisi`
+FROM `el_peserta`
+JOIN `user` ON `user`.`id_user` = `peserta`.`id_user`
+LEFT JOIN `divisi` ON `divisi`.`id_divisi` = `user`.`divisi`
+WHERE `peserta`.`id_rapat` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user`.`username`, `divisi`.`nama_divisi`
+FROM `el_peserta`
+JOIN `user` ON `user`.`id_user` = `peserta`.`id_user`
+LEFT JOIN `divisi` ON `divisi`.`id_divisi` = `user`.`divisi`
+WHERE `peserta`.`id_rapat` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `user`.`username`, `divisi`.`nama_divisi`
+FROM `el_peserta`
+JOIN `user` ON `user`.`id_user` = `peserta`.`id_user`
+LEFT JOIN `divisi` ON `divisi`.`id_divisi` = `user`.`divisi`
+WHERE `peserta`.`id_rapat` = :peserta.id_rapat:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\M_peserta.php(61): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Rapat.php(316): App\Models\M_peserta->getPesertaByRapat('1')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rapat->detail_rapat('1')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rapat))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
+CRITICAL - 2025-08-11 08:07:42 --> [Caused by] mysqli_sql_exception: Table 'elliesecretary.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `user`.`username`, `divisi`.`nama_divisi`
+FROM `el_peserta`
+JOIN `user` ON `user`.`id_user` = `peserta`.`id_user`
+LEFT JOIN `divisi` ON `divisi`.`id_divisi` = `user`.`divisi`
+WHERE `peserta`.`id_rapat` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user`.`username`, `divisi`.`nama_divisi`
+FROM `el_peserta`
+JOIN `user` ON `user`.`id_user` = `peserta`.`id_user`
+LEFT JOIN `divisi` ON `divisi`.`id_divisi` = `user`.`divisi`
+WHERE `peserta`.`id_rapat` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user`.`username`, `divisi`.`nama_divisi`
+FROM `el_peserta`
+JOIN `user` ON `user`.`id_user` = `peserta`.`id_user`
+LEFT JOIN `divisi` ON `divisi`.`id_divisi` = `user`.`divisi`
+WHERE `peserta`.`id_rapat` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `user`.`username`, `divisi`.`nama_divisi`
+FROM `el_peserta`
+JOIN `user` ON `user`.`id_user` = `peserta`.`id_user`
+LEFT JOIN `divisi` ON `divisi`.`id_divisi` = `user`.`divisi`
+WHERE `peserta`.`id_rapat` = :peserta.id_rapat:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\M_peserta.php(61): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Rapat.php(316): App\Models\M_peserta->getPesertaByRapat('1')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Rapat->detail_rapat('1')
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rapat))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\EllieSecre\\public\\index.php')
