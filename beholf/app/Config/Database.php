@@ -26,9 +26,9 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'rplsph.my.id',
-        'username'     => 'permat43_cici',
-        'password'     => 'PunyaAntoni12',
+        'hostname'     => 'localhost',
+        'username'     => 'root',
+        'password'     => '',
         'database'     => 'permat43_cici',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
