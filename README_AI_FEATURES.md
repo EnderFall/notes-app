@@ -14,7 +14,7 @@
 
 ### 2. **Added Hugging Face API Integration**
    - API Key stored securely in `.env` file
-   - Key: `ai.huggingface.apiKey = YOUR_HF_TOKEN`
+
 
 ### 3. **New AI Summarization Features**
 
