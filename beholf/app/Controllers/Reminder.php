@@ -30,12 +30,12 @@ class Reminder extends BaseController
 
         // Find meetings within 12 hours that this user is participating in AND haven't started yet
         // Only send reminders for meetings more than 5 minutes in the future
-        $meetings = $M_rapat->select('el_rapat.*, el_peserta.id_user')
-            ->join('el_peserta', 'el_peserta.id_rapat = el_rapat.id_rapat')
+        $meetings = $M_rapat->select('el_notes.*, el_peserta.id_user')
+            ->join('el_peserta', 'el_peserta.id_note = el_notes.id_note')
             ->where('el_peserta.id_user', $userId)
-            ->where('el_rapat.tanggal >=', $fiveMinutesFromNowWIB)  // Meeting is at least 5 minutes in the future (WIB)
-            ->where('el_rapat.tanggal <=', $twelveHoursFromNowWIB)  // Within 12 hours (WIB)
-            ->where('el_rapat.status_delete', 0)
+            ->where('el_notes.tanggal >=', $fiveMinutesFromNowWIB)  // Meeting is at least 5 minutes in the future (WIB)
+            ->where('el_notes.tanggal <=', $twelveHoursFromNowWIB)  // Within 12 hours (WIB)
+            ->where('el_notes.status_delete', 0)
             ->findAll();
 
         if (empty($meetings)) {
@@ -73,7 +73,7 @@ class Reminder extends BaseController
                         " . (!empty($meeting['keterangan']) ? "<p><strong>📝 Notes:</strong> {$meeting['keterangan']}</p>" : "") . "
                     </div>
                     <p style='color: #666; font-size: 14px;'>
-                        This is an automated reminder from Ellie Meeting Assistant.
+                        This is an automated reminder from Ellie Notes Assistant.
                     </p>
                 </div>
             ";

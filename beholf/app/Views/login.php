@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page - Meeting Assistant</title>
+    <title>Login Page - Notes Assistant</title>
     <link rel="icon" href="<?= base_url('assets/dash/img/ellie-logo.jpg'); ?>" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.css'); ?>">
@@ -35,7 +35,7 @@
 <body>
     
     <div id="auth">
-        <h2 class="text-center mb-4" style="font-weight: 700; color: #ff94a8;">Ellie Meeting Assistant</h2>
+        <h2 class="text-center mb-4" style="font-weight: 700; color: #ff94a8;">Ellie Notes Assistant</h2>
         <form id="login-form" action="<?= base_url('login/aksi_login') ?>" method="post">
             <input type="hidden" name="correct_answer" id="correct-answer">
             <input type="hidden" name="math_answer" id="user-answer">

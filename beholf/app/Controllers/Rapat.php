@@ -39,9 +39,9 @@ class Rapat extends BaseController
             // 🔸 Ambil data rapat sesuai hak akses
             if ($can_create) {
                 // Jika punya hak akses penuh (lihat semua)
-                $rapat = $M_rapat->select('el_rapat.*, el_divisi.nama_divisi AS divisi')
-                    ->join('el_divisi', 'el_rapat.divisi = el_divisi.id_divisi', 'left')
-                    ->where('el_rapat.status_delete', 0)
+                $rapat = $M_rapat->select('el_notes.*, el_category.name AS category_name, el_category.color AS category_color, el_category.icon AS category_icon')
+                    ->join('el_category', 'el_notes.category = el_category.id_category', 'left')
+                    ->where('el_notes.status_delete', 0)
                     ->asObject()
                     ->findAll();
             } else {
@@ -49,15 +49,15 @@ class Rapat extends BaseController
                 $user_id = session()->get('id_user');
                 $user_divisi = session()->get('divisi'); // pastikan divisi disimpan di session saat login
 
-                $rapat = $M_rapat->select('el_rapat.*, el_divisi.nama_divisi AS divisi')
-                    ->join('el_divisi', 'el_rapat.divisi = el_divisi.id_divisi', 'left')
-                    ->join('el_peserta', 'el_peserta.id_rapat = el_rapat.id_rapat', 'left')
+                $rapat = $M_rapat->select('el_notes.*, el_category.name AS category_name, el_category.color AS category_color, el_category.icon AS category_icon')
+                    ->join('el_category', 'el_notes.category = el_category.id_category', 'left')
+                    ->join('el_peserta', 'el_peserta.id_note = el_notes.id_note', 'left')
                     ->groupStart()
                     ->where('el_peserta.id_user', $user_id)
-                    ->orWhere('el_rapat.divisi', $user_divisi)
+                    ->orWhere('el_notes.category', $user_divisi)
                     ->groupEnd()
-                    ->where('el_rapat.status_delete', 0)
-                    ->groupBy('el_rapat.id_rapat')
+                    ->where('el_notes.status_delete', 0)
+                    ->groupBy('el_notes.id_note')
                     ->asObject()
                     ->findAll();
             } 
@@ -81,10 +81,10 @@ class Rapat extends BaseController
     public function tambah_rapat()
     {
         if (session()->get('id_user') > 0) {
-            $rapat = new M_rapat();
+            $M_category = new \App\Models\M_category();
             $data = [
-                'title' => 'Tambah Data Rapat',
-                'divisi' => $rapat->getAllDivisi(), // ambil daftar divisi dari tabel el_divisi
+                'title' => 'Tambah Data Note',
+                'divisi' => $M_category->getAllCategories(), // Get all categories
             ];
 
             echo view('header', $data);
@@ -102,37 +102,49 @@ class Rapat extends BaseController
         $lokasi = $this->request->getPost('lokasi');
         $tanggal = $this->request->getPost('tanggal');
         $keterangan = $this->request->getPost('keterangan');
-        $divisi = $this->request->getPost('divisi');
-        $tanggal = date('Y-m-d H:i:s', strtotime($tanggal));
+        $category = $this->request->getPost('category');
+        $content = $this->request->getPost('content');
+        $tags = $this->request->getPost('tags');
+        
+        // Set current date/time if not provided
+        if (empty($tanggal)) {
+            $tanggal = date('Y-m-d H:i:s');
+        } else {
+            $tanggal = date('Y-m-d H:i:s', strtotime($tanggal));
+        }
 
         $data = [
             'judul' => $judul,
             'tanggal' => $tanggal,
             'lokasi' => $lokasi,
             'keterangan' => $keterangan ?: null,
-            'divisi' => $divisi,
+            'content' => $content,
+            'category' => $category,
+            'tags' => $tags,
             'created_at' => date('Y-m-d H:i:s'),
+            'created_by' => session()->get('id_user'),
         ];
 
         $model = new M_rapat();
         $model->insert($data);
-        $this->logActivity("Menambahkan rapat baru: $judul");
+        $this->logActivity("Menambahkan note baru: $judul");
 
-        return redirect()->to(base_url('rapat'))->with('success', 'rapat berhasil ditambahkan.');
+        return redirect()->to(base_url('rapat'))->with('success', 'Note berhasil ditambahkan.');
     }
 
     public function edit_rapat($id)
     {
         if (session()->get('id_user') > 0) {
             $model = new M_rapat();
+            $M_category = new \App\Models\M_category();
             $data = [
-                'title' => 'Edit Rapat',
-                'divisi' => $model->getAllDivisi(), // ambil daftar divisi dari tabel el_divisi
+                'title' => 'Edit Note',
+                'divisi' => $M_category->getAllCategories(),
             ];
             $data['rapat'] = $model->asObject()->find($id);
 
             if (!$data['rapat']) {
-                return redirect()->to('/rapat')->with('error', 'rapat tidak ditemukan.');
+                return redirect()->to('/rapat')->with('error', 'Note tidak ditemukan.');
             }
 
             echo view('header', $data);
@@ -156,8 +168,10 @@ class Rapat extends BaseController
         $judul = $this->request->getPost('judul');
         $tanggal = $this->request->getPost('tanggal');
         $lokasi = $this->request->getPost('lokasi') ?: null;
-        $divisi = $this->request->getPost('divisi');
+        $category = $this->request->getPost('category');
         $keterangan = $this->request->getPost('keterangan');
+        $content = $this->request->getPost('content');
+        $tags = $this->request->getPost('tags');
         $tanggal = date('Y-m-d H:i:s', strtotime($tanggal));
 
         $data = [
@@ -165,7 +179,9 @@ class Rapat extends BaseController
             'tanggal' => $tanggal,
             'lokasi' => $lokasi,
             'keterangan' => $keterangan,
-            'divisi' => $divisi,
+            'content' => $content,
+            'tags' => $tags,
+            'category' => $category,
             'updated_at' => date('Y-m-d H:i:s'),
         ];
 
@@ -176,7 +192,7 @@ class Rapat extends BaseController
         return redirect()->to(base_url('rapat'))->with('success', 'Data rapat berhasil diupdate.');
     }
 
-    public function get_peserta($id_rapat)
+    public function get_peserta($id_note)
     {
         $userModel = new \App\Models\M_user();
         $pesertaModel = new \App\Models\M_peserta();
@@ -185,7 +201,7 @@ class Rapat extends BaseController
         $users = $userModel->getUsersWithDivisi();
 
         $pesertaDipilih = $pesertaModel
-            ->where('id_rapat', $id_rapat)
+            ->where('id_note', $id_note)
             ->findColumn('id_user') ?? [];
 
         $divisiList = array_unique(array_column($users, 'nama_divisi'));
@@ -234,7 +250,7 @@ class Rapat extends BaseController
 
     public function simpan_peserta_single()
     {
-        $id_rapat = $this->request->getPost('id_rapat');
+        $id_note = $this->request->getPost('id_rapat');
         $id_user = $this->request->getPost('id_user');
         $status = $this->request->getPost('status'); // 1 = centang, 0 = hapus
 
@@ -242,19 +258,19 @@ class Rapat extends BaseController
 
         if ($status == 1) {
             // Insert jika belum ada
-            $exists = $pesertaModel->where('id_rapat', $id_rapat)
+            $exists = $pesertaModel->where('id_note', $id_note)
                 ->where('id_user', $id_user)
                 ->first();
             if (!$exists) {
                 $pesertaModel->insert([
-                    'id_rapat' => $id_rapat,
+                    'id_note' => $id_note,
                     'id_user' => $id_user
                 ]);
             }
             return $this->response->setJSON(['status' => 'success', 'message' => 'Peserta ditambahkan']);
         } else {
             // Hapus peserta
-            $pesertaModel->where('id_rapat', $id_rapat)
+            $pesertaModel->where('id_note', $id_note)
                 ->where('id_user', $id_user)
                 ->delete();
             return $this->response->setJSON(['status' => 'success', 'message' => 'Peserta dihapus']);
@@ -290,15 +306,15 @@ class Rapat extends BaseController
 
     public function simpan_peserta()
     {
-        $id_rapat = $this->request->getPost('id_rapat');
+        $id_note = $this->request->getPost('id_rapat');
         $peserta = $this->request->getPost('peserta') ?? [];
 
         $pesertaModel = new \App\Models\M_peserta();
-        $pesertaModel->where('id_rapat', $id_rapat)->delete();
+        $pesertaModel->where('id_note', $id_note)->delete();
 
         foreach ($peserta as $id_user) {
             $pesertaModel->insert([
-                'id_rapat' => $id_rapat,
+                'id_note' => $id_note,
                 'id_user' => $id_user
             ]);
         }
@@ -348,7 +364,7 @@ class Rapat extends BaseController
         $M_transkrip = new M_transkrip();
 
         // Ambil semua transkrip untuk hapus file audio-nya dulu
-        $transkripList = $M_transkrip->where('id_rapat', $id)->findAll();
+        $transkripList = $M_transkrip->where('id_note', $id)->findAll();
 
         if ($transkripList) {
             foreach ($transkripList as $t) {
@@ -410,9 +426,9 @@ class Rapat extends BaseController
             $rapat = $M_rapat->getRapatById($id);
             $peserta = $M_peserta->getPesertaByRapat($id);
             $transkrip = $M_transkrip
-                ->select('el_transkrip_rapat.*, el_user.username')
-                ->join('el_user', 'el_user.id_user = el_transkrip_rapat.id_user', 'left')
-                ->where('id_rapat', $id)
+                ->select('el_note_transcripts.*, el_user.username')
+                ->join('el_user', 'el_user.id_user = el_note_transcripts.id_user', 'left')
+                ->where('id_note', $id)
                 ->orderBy('waktu_upload', 'DESC')
                 ->findAll();
 
@@ -431,6 +447,239 @@ class Rapat extends BaseController
             echo view('footer');
         } else {
             return redirect()->to('login/logout');
+        }
+    }
+
+    /**
+     * Summarize a note/meeting using AI
+     */
+    public function summarize($id)
+    {
+        if (session()->get('id_user') > 0) {
+            $M_rapat = new M_rapat();
+            $rapat = $M_rapat->find($id);
+
+            if (!$rapat) {
+                return $this->response->setJSON([
+                    'status' => 'error',
+                    'message' => 'Catatan tidak ditemukan'
+                ]);
+            }
+
+            // Combine title and description for summarization
+            $textToSummarize = $rapat['judul'] . '. ' . ($rapat['keterangan'] ?? '');
+
+            if (empty(trim($textToSummarize))) {
+                return $this->response->setJSON([
+                    'status' => 'error',
+                    'message' => 'Tidak ada teks untuk diringkas'
+                ]);
+            }
+
+            try {
+                $summarizationService = new \App\Services\SummarizationService();
+                $result = $summarizationService->summarizeNote($textToSummarize);
+
+                $this->logActivity("Meringkas catatan ID: $id menggunakan AI");
+
+                return $this->response->setJSON([
+                    'status' => 'success',
+                    'data' => $result
+                ]);
+            } catch (\Exception $e) {
+                log_message('error', 'Summarization error: ' . $e->getMessage());
+                return $this->response->setJSON([
+                    'status' => 'error',
+                    'message' => 'Terjadi kesalahan saat meringkas catatan'
+                ]);
+            }
+        } else {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Unauthorized'
+            ]);
+        }
+    }
+
+    /**
+     * Get highlighted version of note content
+     */
+    public function highlightKeywords($id)
+    {
+        if (session()->get('id_user') > 0) {
+            $M_rapat = new M_rapat();
+            $rapat = $M_rapat->find($id);
+
+            if (!$rapat) {
+                return $this->response->setJSON([
+                    'status' => 'error',
+                    'message' => 'Catatan tidak ditemukan'
+                ]);
+            }
+
+            $keywords = $this->request->getJSON(true)['keywords'] ?? [];
+
+            if (empty($keywords)) {
+                return $this->response->setJSON([
+                    'status' => 'error',
+                    'message' => 'Tidak ada kata kunci'
+                ]);
+            }
+
+            $summarizationService = new \App\Services\SummarizationService();
+            $highlightedText = $summarizationService->highlightKeywords(
+                $rapat['content'] ?? nl2br(htmlspecialchars($rapat['keterangan'] ?? '')),
+                $keywords
+            );
+
+            return $this->response->setJSON([
+                'status' => 'success',
+                'highlighted_text' => $highlightedText
+            ]);
+        } else {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Unauthorized'
+            ]);
+        }
+    }
+
+    /**
+     * Extract text from uploaded document (AJAX endpoint)
+     * Does not save the file, only extracts and returns text
+     */
+    public function extract_document_text()
+    {
+        if (session()->get('id_user') <= 0) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Unauthorized'
+            ]);
+        }
+
+        $file = $this->request->getFile('document');
+        
+        if (!$file || !$file->isValid()) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'No valid file uploaded'
+            ]);
+        }
+
+        $allowedExtensions = ['pdf', 'doc', 'docx'];
+        $fileExtension = strtolower($file->getClientExtension());
+        
+        if (!in_array($fileExtension, $allowedExtensions)) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Invalid file type. Only PDF and Word documents are allowed.'
+            ]);
+        }
+
+        try {
+            // Move to temporary location
+            $tempPath = WRITEPATH . 'uploads/temp/';
+            if (!is_dir($tempPath)) {
+                mkdir($tempPath, 0777, true);
+            }
+            
+            $tempFileName = 'temp_' . uniqid() . '.' . $fileExtension;
+            $file->move($tempPath, $tempFileName);
+            $filePath = $tempPath . $tempFileName;
+
+            // Extract text
+            $extractedText = $this->extractTextFromDocument($filePath, $fileExtension);
+
+            // Delete temporary file
+            if (file_exists($filePath)) {
+                unlink($filePath);
+            }
+
+            if (empty($extractedText)) {
+                return $this->response->setJSON([
+                    'status' => 'error',
+                    'message' => 'Could not extract text from document'
+                ]);
+            }
+
+            $this->logActivity("Extracted text from uploaded document ({$fileExtension})");
+
+            return $this->response->setJSON([
+                'status' => 'success',
+                'text' => $extractedText,
+                'length' => strlen($extractedText)
+            ]);
+
+        } catch (\Exception $e) {
+            log_message('error', 'Document text extraction error: ' . $e->getMessage());
+            
+            // Clean up temp file if it exists
+            if (isset($filePath) && file_exists($filePath)) {
+                unlink($filePath);
+            }
+            
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Error extracting text: ' . $e->getMessage()
+            ]);
+        }
+    }
+
+    /**
+     * Extract text content from uploaded PDF or Word document
+     * @param string $filePath Path to the uploaded file
+     * @param string $fileExtension File extension (pdf, doc, docx)
+     * @return string Extracted text content
+     */
+    private function extractTextFromDocument($filePath, $fileExtension)
+    {
+        $extractedText = '';
+
+        try {
+            if ($fileExtension === 'pdf') {
+                // Extract text from PDF using smalot/pdfparser
+                $parser = new \Smalot\PdfParser\Parser();
+                $pdf = $parser->parseFile($filePath);
+                $extractedText = $pdf->getText();
+            } elseif (in_array($fileExtension, ['doc', 'docx'])) {
+                // Extract text from Word document using PHPWord
+                $phpWord = \PhpOffice\PhpWord\IOFactory::load($filePath);
+                
+                foreach ($phpWord->getSections() as $section) {
+                    foreach ($section->getElements() as $element) {
+                        if (method_exists($element, 'getText')) {
+                            $extractedText .= $element->getText() . "\n";
+                        } elseif (method_exists($element, 'getElements')) {
+                            foreach ($element->getElements() as $childElement) {
+                                if (method_exists($childElement, 'getText')) {
+                                    $extractedText .= $childElement->getText() . "\n";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Clean up the extracted text
+            $extractedText = trim($extractedText);
+            
+            // Convert to HTML paragraphs for better display
+            if (!empty($extractedText)) {
+                $paragraphs = explode("\n\n", $extractedText);
+                $htmlContent = '';
+                foreach ($paragraphs as $paragraph) {
+                    $paragraph = trim($paragraph);
+                    if (!empty($paragraph)) {
+                        $htmlContent .= '<p>' . nl2br(htmlspecialchars($paragraph)) . '</p>';
+                    }
+                }
+                return $htmlContent;
+            }
+
+            return $extractedText;
+        } catch (\Exception $e) {
+            log_message('error', 'Document extraction error: ' . $e->getMessage());
+            return '';
         }
     }
 

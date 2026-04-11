@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Page - Meeting Assistant</title>
+    <title>Register Page - Notes Assistant</title>
     <link rel="icon" href="<?= base_url('assets/dash/img/ellie-logo.jpg'); ?>" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.css'); ?>">

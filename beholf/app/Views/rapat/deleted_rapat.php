@@ -70,10 +70,10 @@
                                             <td><?php echo $value->keterangan ?></td>
                                             <td><?php echo $value->divisi ?></td>
                                             <td>
-                                                <a href="<?= base_url('rapat/restore_rapat/' . $value->id_rapat) ?>"
+                                                <a href="<?= base_url('rapat/restore_rapat/' . $value->id_note) ?>"
                                                     class="btn btn-success my-1"><i class="fa fa-undo"></i></a>
 
-                                                <a href="<?= base_url('rapat/hapus_rapat/' . $value->id_rapat) ?>"
+                                                <a href="<?= base_url('rapat/hapus_rapat/' . $value->id_note) ?>"
                                                     class="btn btn-danger my-1"
                                                     onclick="return confirm('Apakah Anda yakin ingin menghapus data ini secara permanen?')"><i
                                                         class="fa fa-trash"></i></a>

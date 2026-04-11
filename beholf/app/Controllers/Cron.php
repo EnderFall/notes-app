@@ -42,7 +42,7 @@ class Cron extends Controller
             $participants = $pesertaModel
                 ->select('el_user.email, el_user.username')
                 ->join('el_user', 'el_user.id_user = el_peserta.id_user')
-                ->where('el_peserta.id_rapat', $meeting['id_rapat'])
+                ->where('el_peserta.id_note', $meeting['id_note'])
                 ->findAll();
 
             if (empty($participants)) {

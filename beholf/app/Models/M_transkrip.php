@@ -6,11 +6,11 @@ use CodeIgniter\Model;
 
 class M_transkrip extends Model
 {
-    protected $table = 'el_transkrip_rapat';
+    protected $table = 'el_note_transcripts';
     protected $primaryKey = 'id_transkrip_rapat';
     protected $allowedFields = [
         'id_transkrip_rapat',
-        'id_rapat',
+        'id_note',
         'file_name',
         'file_url',
         'hasil_transkrip',
@@ -37,7 +37,7 @@ class M_transkrip extends Model
 
     public function RapatdiDelete($id)
     {
-        return $this->where('id_rapat', $id)->delete();
+        return $this->where('id_note', $id)->delete();
     }
 
     // public function getDeletedrapat()

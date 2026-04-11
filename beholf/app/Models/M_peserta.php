@@ -10,7 +10,7 @@ class M_peserta extends Model
     protected $primaryKey = 'id_peserta';
     protected $allowedFields = [
         'id_peserta',
-        'id_rapat',
+        'id_note',
         'status',
         'catatan',
         'id_user',
@@ -39,7 +39,7 @@ class M_peserta extends Model
 
     public function RapatdiDelete($id)
     {
-        return $this->where('id_rapat', $id)->delete();
+        return $this->where('id_note', $id)->delete();
     }
 
     public function getDeletedpeserta()
@@ -57,12 +57,12 @@ class M_peserta extends Model
         return $this->db->table('el_divisi')->get()->getResult();
     }
 
-    public function getPesertaByRapat($id_rapat)
+    public function getPesertaByRapat($id_note)
     {
         return $this->select('el_user.username, el_divisi.nama_divisi')
                     ->join('el_user', 'el_user.id_user = el_peserta.id_user')
                     ->join('el_divisi', 'el_divisi.id_divisi = el_user.divisi', 'left')
-                    ->where('el_peserta.id_rapat', $id_rapat)
+                    ->where('el_peserta.id_note', $id_note)
                     ->findAll();
     }
 }

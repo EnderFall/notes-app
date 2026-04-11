@@ -1,6 +1,12 @@
 <style>
+    .table-responsive {
+        overflow: visible !important;
+    }
     /* Batasi lebar kolom teks panjang dan wrap biar nggak nabrak */
     @media (max-width: 768px) {
+        .table-responsive {
+            overflow-x: auto !important;
+        }
 
         #table-rapat td,
         #table-rapat th {
@@ -111,7 +117,7 @@
                                         <th>Tanggal</th>
                                         <th>Lokasi</th>
                                         <th>Keterangan</th>
-                                        <th>Divisi</th>
+                                        <th>Category</th>
                                         <?php if ($can_create): ?>
                                         <th>Peserta</th> <!-- ✅ kolom baru -->
                                         <?php endif; ?>
@@ -130,11 +136,15 @@
 
                                             <td><?= $b->lokasi ?></td>
                                             <td><?= $b->keterangan ?></td>
-                                            <td><?= $b->divisi ?></td>
+                                            <td>
+                                                <span class="badge" style="background-color: <?= $b->category_color ?? '#6c757d' ?>">
+                                                    <i class="<?= $b->category_icon ?? 'bi-tag' ?>"></i> <?= $b->category_name ?? 'Uncategorized' ?>
+                                                </span>
+                                            </td>
                                             <?php if ($can_create): ?>
                                             <td>
                                                 <button class="btn btn-sm btn-info btn-pilih-peserta"
-                                                    data-id="<?= $b->id_rapat ?>">
+                                                    data-id="<?= $b->id_note ?>">
                                                     <i class="fa-solid fa-users"></i> Pilih
                                                 </button>
                                             </td>
@@ -142,27 +152,27 @@
                                             <td>
                                                 <div class="btn-group">
                                                     <button type="button" class="btn btn-sm btn-secondary dropdown-toggle"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        data-bs-toggle="dropdown" data-bs-boundary="viewport" aria-expanded="false">
                                                         <i class="fa fa-cog"></i>
                                                     </button>
-                                                    <ul class="dropdown-menu">
+                                                    <ul class="dropdown-menu dropdown-menu-end">
                                                         <li>
                                                             <a class="dropdown-item text-info"
-                                                                href="<?= base_url('rapat/detail_rapat/' . $b->id_rapat) ?>">
+                                                                href="<?= base_url('rapat/detail_rapat/' . $b->id_note) ?>">
                                                                 <i class="fa-solid fa-info me-1"></i> Detail
                                                             </a>
                                                         </li>
                                                         <?php if ($can_create): ?>
                                                         <li>
                                                             <a class="dropdown-item text-warning"
-                                                                href="<?= base_url('rapat/edit_rapat/' . $b->id_rapat) ?>">
+                                                                href="<?= base_url('rapat/edit_rapat/' . $b->id_note) ?>">
                                                                 <i class="fa-solid fa-pen-to-square me-1"></i> Edit
                                                             </a>
                                                         </li>
 
                                                         <li>
                                                             <a class="dropdown-item text-danger"
-                                                                href="<?= base_url('rapat/delete_rapat/' . $b->id_rapat) ?>"
+                                                                href="<?= base_url('rapat/delete_rapat/' . $b->id_note) ?>"
                                                                 onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                                                                 <i class="fa-solid fa-trash me-1"></i> Hapus
                                                             </a>

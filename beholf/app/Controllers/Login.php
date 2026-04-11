@@ -208,7 +208,7 @@ class Login extends BaseController
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
-            $mail->setFrom('kurumidafox@gmail.com', 'Ellie - Meeting Assistant');
+            $mail->setFrom('kurumidafox@gmail.com', 'Ellie - Notes Assistant');
             $mail->addAddress($to);
 
             $mail->isHTML(true);
@@ -242,7 +242,7 @@ class Login extends BaseController
             $phone = $rawPhone;
         }
         $verify_link = base_url('verifikasi');
-        $message = "Selamat Datang di Ellie - Meeting Assistant! Kode verifikasi akun Anda adalah: {$user['otp']}\n\nKlik link berikut untuk verifikasi: $verify_link";
+        $message = "Selamat Datang di Ellie - Notes Assistant! Kode verifikasi akun Anda adalah: {$user['otp']}\n\nKlik link berikut untuk verifikasi: $verify_link";
 
         $curl = curl_init();
         curl_setopt_array($curl, [

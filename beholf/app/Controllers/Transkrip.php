@@ -64,7 +64,7 @@ class Transkrip extends BaseController
         $language = $this->request->getPost('language') ?? 'id-ID';
         $file = $this->request->getFile('audio');
         $judul = $this->request->getPost('judul');
-        $idRapat = $this->request->getPost('id_rapat');
+        $idNote = $this->request->getPost('id_rapat');
         $id_user = session()->get('id_user');
 
         if ($file->isValid() && !$file->hasMoved()) {
@@ -78,7 +78,7 @@ class Transkrip extends BaseController
             $transkrip = $this->callApyHubAPI($audioPath, $language);
 
             $this->transkripModel->insert([
-                'id_rapat' => $idRapat ?? null,
+                'id_note' => $idNote ?? null,
                 'file_name' => $newName,
                 'file_url' => $judul,
                 'hasil_transkrip' => $transkrip,

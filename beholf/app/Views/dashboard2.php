@@ -181,8 +181,8 @@
         <div class="image-overlay"></div>
 
         <div class="hero-content">
-          <h2><span>Ellie</span> Meeting Assistant</h2>
-          <p>Your assistant for smarter meetings</p>
+          <h2><span>Ellie</span> Notes Assistant</h2>
+          <p>Your assistant for smarter note-taking</p>
         </div>
       </div>
     </section>
@@ -194,8 +194,8 @@
     <div class="chatbot-card" role="dialog" aria-label="Ellie Chatbot">
       <div class="chatbot-header">
         <div>
-          <div class="title">Ellie — Meeting Assistant</div>
-          <div style="font-size:12px;color:#6b7280">Tanyakan tentang rapat, agenda, atau bantuan lain.</div>
+          <div class="title">Ellie — Notes Assistant</div>
+          <div style="font-size:12px;color:#6b7280">Tanyakan tentang catatan, agenda, atau bantuan lain.</div>
         </div>
         <div style="margin-left:auto">
           <button id="chatCloseBtn" title="Tutup"

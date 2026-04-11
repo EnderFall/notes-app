@@ -6,15 +6,17 @@ use CodeIgniter\Model;
 
 class M_rapat extends Model
 {
-    protected $table = 'el_rapat';
-    protected $primaryKey = 'id_rapat';
+    protected $table = 'el_notes';
+    protected $primaryKey = 'id_note';
     protected $allowedFields = [
-        'id_rapat',
+        'id_note',
         'judul',
         'tanggal',
         'lokasi',
         'keterangan',
-        'divisi',
+        'content',
+        'category',
+        'tags',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -36,12 +38,12 @@ class M_rapat extends Model
 
     public function deletePermanen($id)
     {
-        return $this->where('id_rapat', $id)->delete();
+        return $this->where('id_note', $id)->delete();
     }
 
     public function getDeletedrapat()
     {
-        return $this->db->table('el_rapat')->where('status_delete', 1)->get()->getResult();
+        return $this->db->table('el_notes')->where('status_delete', 1)->get()->getResult();
     }
 
     public function getRapatById($id)
@@ -49,10 +51,9 @@ class M_rapat extends Model
         return $this->asObject()->find($id);
     }
 
-    public function getAllDivisi()
+    public function getAllCategories()
     {
-        return $this->db->table('el_divisi')->get()->getResult();
+        return $this->db->table('el_category')->where('status_delete', 0)->orderBy('name', 'ASC')->get()->getResult();
     }
-
 
 }

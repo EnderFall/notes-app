@@ -5,6 +5,47 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+
+// ── Note Features (AI) ──────────────────────────────────────────────────────
+$routes->group('note-features', function ($routes) {
+    // Summarization
+    $routes->post('summarize/(:num)',       'NoteFeatures::summarize/$1');
+    $routes->get('summaries/(:num)',        'NoteFeatures::getSummaries/$1');
+    $routes->get('summary/delete/(:num)',   'NoteFeatures::deleteSummary/$1');
+
+    // Flash Cards
+    $routes->post('flashcards/generate/(:num)',  'NoteFeatures::generateFlashCards/$1');
+    $routes->get('flashcards/(:num)',             'NoteFeatures::getFlashCards/$1');
+    $routes->post('flashcards/save',              'NoteFeatures::saveFlashCard');
+    $routes->post('flashcards/update/(:num)',     'NoteFeatures::updateFlashCard/$1');
+    $routes->get('flashcards/delete/(:num)',      'NoteFeatures::deleteFlashCard/$1');
+
+    // Highlights
+    $routes->post('highlights/save',              'NoteFeatures::saveHighlight');
+    $routes->get('highlights/(:num)',             'NoteFeatures::getHighlights/$1');
+    $routes->get('highlights/delete/(:num)',      'NoteFeatures::deleteHighlight/$1');
+
+    // Smart Structure
+    $routes->post('structure/extract/(:num)',     'NoteFeatures::extractStructure/$1');
+    $routes->get('structure/(:num)',              'NoteFeatures::getStructure/$1');
+
+    // Term Lookup
+    $routes->post('term/lookup',                  'NoteFeatures::lookupTerm');
+    $routes->get('terms/(:num)',                  'NoteFeatures::getTerms/$1');
+
+    // Chat with Note
+    $routes->post('chat/(:num)',                  'NoteFeatures::chat/$1');
+    $routes->get('chat/history/(:num)',           'NoteFeatures::getChatHistory/$1');
+    $routes->get('chat/clear/(:num)',             'NoteFeatures::clearChat/$1');
+
+    // Explain selected text
+    $routes->post('explain',                      'NoteFeatures::explain');
+
+    // Related Notes
+    $routes->get('related/(:num)',                'NoteFeatures::relatedNotes/$1');
+});
+// ────────────────────────────────────────────────────────────────────────────
+
 $routes->get('divisi', 'Divisi::index');
 $routes->get('divisi/tambah_divisi', 'Divisi::tambah_divisi');
 $routes->post('divisi/simpan_divisi', 'Divisi::aksi_tambah_divisi');
@@ -15,6 +56,18 @@ $routes->get('divisi/delete_divisi/(:num)', 'Divisi::delete_divisi/$1');
 $routes->get('divisi/restore_divisi/(:num)', 'Divisi::restore_divisi/$1');
 $routes->get('divisi/hapus_divisi/(:num)', 'Divisi::hapus_divisi/$1');
 $routes->get('divisi/detail_divisi/(:num)', 'Divisi::detail_divisi/$1');
+
+// Category Routes
+$routes->get('category', 'Category::index');
+$routes->get('category/tambah_category', 'Category::tambah_category');
+$routes->post('category/simpan_category', 'Category::aksi_tambah_category');
+$routes->post('category/update/(:num)', 'Category::update_category/$1');
+$routes->get('category/edit_category/(:num)', 'Category::edit_category/$1');
+$routes->get('category/dihapus_category', 'Category::dihapus_category');
+$routes->get('category/delete_category/(:num)', 'Category::delete_category/$1');
+$routes->get('category/restore_category/(:num)', 'Category::restore_category/$1');
+$routes->get('category/hapus_category/(:num)', 'Category::hapus_category/$1');
+$routes->get('category/detail_category/(:num)', 'Category::detail_category/$1');
 
 $routes->get('hak_akses', 'HakAkses::index');
 $routes->get('hak_akses/tambah_form', 'HakAkses::tambah_form');
@@ -83,6 +136,8 @@ $routes->get('rapat/detail_rapat/(:num)', 'Rapat::detail_rapat/$1');
 $routes->get('rapat/get_peserta/(:num)', 'Rapat::get_peserta/$1');
 $routes->post('rapat/simpan_peserta', 'Rapat::simpan_peserta');
 $routes->post('rapat/simpan_peserta_single', 'Rapat::simpan_peserta_single');
+$routes->get('rapat/summarize/(:num)', 'Rapat::summarize/$1');
+$routes->post('rapat/highlightKeywords/(:num)', 'Rapat::highlightKeywords/$1');
 
 $routes->get('setting', 'Setting::index');
 $routes->post('setting/update', 'Setting::update');

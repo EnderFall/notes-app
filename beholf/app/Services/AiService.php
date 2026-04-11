@@ -8,14 +8,14 @@ class AiService
 {
     protected $session;
     protected $apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
-    protected $apiKey = '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'; // Replace with your actual OpenRouter API key
+    protected $apiKey;
     protected $model = 'microsoft/wizardlm-2-8x22b'; // Free model, change if needed
     protected $maxHistory = 20; // Limit history to last 20 messages
 
     public function __construct()
     {
         $this->session = session();
-        $this->apiKey = getenv('OPENROUTER_API_KEY') ?: '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'; // Replace with your actual key or use env
+        $this->apiKey = getenv('OPENROUTER_API_KEY') ?: null;
     }
 
     public function getResponse(string $userMessage): string
@@ -67,6 +67,11 @@ class AiService
 
     protected function callOpenRouter(array $payload): string|false
     {
+        if (!$this->apiKey) {
+            log_message('error', 'OPENROUTER_API_KEY is missing from environment.');
+            return false;
+        }
+
         $ch = curl_init($this->apiUrl);
         curl_setopt_array($ch, [
             CURLOPT_RETURNTRANSFER => true,
@@ -74,7 +79,7 @@ class AiService
                 'Authorization: Bearer ' . $this->apiKey,
                 'Content-Type: application/json',
                 'HTTP-Referer: ' . base_url(), // Optional, for OpenRouter analytics
-                'X-Title: Ellie Meeting Assistant' // Optional
+                'X-Title: Ellie Notes Assistant' // Optional
             ],
             CURLOPT_POST => true,
             CURLOPT_POSTFIELDS => json_encode($payload),

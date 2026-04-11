@@ -45,13 +45,13 @@ class SendMeetingReminders extends BaseCommand
         $sentCount = 0;
 
         foreach ($upcomingMeetings as $meeting) {
-            CLI::write("Checking meeting: {$meeting['judul']} (ID: {$meeting['id_rapat']})", 'blue');
+            CLI::write("Checking meeting: {$meeting['judul']} (ID: {$meeting['id_note']})", 'blue');
 
             // Get participants for this meeting
             $participants = $pesertaModel
                 ->select('el_user.email, el_user.username')
                 ->join('el_user', 'el_user.id_user = el_peserta.id_user')
-                ->where('el_peserta.id_rapat', $meeting['id_rapat'])
+                ->where('el_peserta.id_note', $meeting['id_note'])
                 ->findAll();
 
             CLI::write("Found " . count($participants) . " participants for meeting: {$meeting['judul']}", 'blue');
