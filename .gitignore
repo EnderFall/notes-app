@@ -1,1 +1,36 @@
+# ── Environment & Secrets ─────────────────────────────────────────────────
 beholf/.env
+.env
+.env.*
+!.env.example
+*.env
+
+# API keys and credentials
+**/secrets.*
+**/*secret*
+**/*credentials*
+**/*apikey*
+**/*api_key*
+
+# ── CodeIgniter writable directory ───────────────────────────────────────
+beholf/writable/cache/*
+beholf/writable/logs/*
+beholf/writable/session/*
+beholf/writable/uploads/*
+beholf/writable/debugbar/*
+!beholf/writable/cache/.gitkeep
+!beholf/writable/logs/.gitkeep
+!beholf/writable/session/.gitkeep
+!beholf/writable/uploads/.gitkeep
+
+# ── Composer & Node ───────────────────────────────────────────────────────
+beholf/vendor/
+node_modules/
+
+# ── OS & Editor ───────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
