@@ -80,19 +80,7 @@
                         </div>
 
                         <hr>
-                        <div class="mt-3">
-                            <button id="summary-btn" class="btn btn-warning btn-sm">Kesimpulan</button>
-                        </div>
-
-                        <div id="loading-summary" style="display:none;" class="mt-2 text-muted">
-                            <em>Sedang menganalisis dan merangkum...</em>
-                        </div>
-
-                        <div id="summary-container"
-                            style="display:none; margin-top:15px; border:1px solid #ffc107; border-radius:6px; padding:10px; background:#fff8e1;">
-                            <h6><strong>Kesimpulan Otomatis:</strong></h6>
-                            <div id="summary-text" style="white-space: pre-wrap;"></div>
-                        </div>
+                        
 
 
                         <div class="mt-3 d-flex gap-2">

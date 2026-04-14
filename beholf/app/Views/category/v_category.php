@@ -110,7 +110,7 @@
                                                 </span>
                                             </td>
                                             <td>
-                                                <span class="badge bg-info"><?= isset($c->notes_count) ? $c->notes_count : 0 ?> notes</span>
+                                                <span class="badge bg-info"><?= isset($c->note_count) ? $c->note_count : 0 ?> notes</span>
                                             </td>
                                             <td>
                                                 <div class="btn-group">

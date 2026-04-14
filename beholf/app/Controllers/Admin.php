@@ -37,6 +37,11 @@ class Admin extends BaseController
                 session()->set('reminders_sent_' . $idUser, true);
             }
 
+            // Get calendar data
+            $currentYear = date('Y');
+            $currentMonth = date('m');
+            $calendarNotes = $rapatModel->getNotesForCalendar($currentYear, $currentMonth);
+
             $data = [
                 'title' => 'Dashboard Admin',
                 'totalUser' => $totalUser,
@@ -46,6 +51,9 @@ class Admin extends BaseController
                 'weeklyStats' => $transkripModel->getWeeklyStatsFull(),
                 'monthlyStats' => $transkripModel->getMonthlyStatsFull(),
                 'username' => $userData['username'] ?? $username,
+                'calendarNotes' => $calendarNotes,
+                'currentYear' => $currentYear,
+                'currentMonth' => $currentMonth,
             ];
 
             echo view('header', $data);

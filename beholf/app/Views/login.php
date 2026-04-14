@@ -28,6 +28,41 @@
         .btn-primary {background: rgb(7, 151, 108); border: none; width: 100%; padding: 0.9rem; font-weight: 700; border-radius: 8px;
             color: #fff; cursor: pointer; transition: background 0.3s ease, transform 0.2s ease;}
         .btn-primary:hover {background: #055e49; transform: translateY(-2px);}
+        .arrow-btn {
+            position: relative;
+            background: linear-gradient(135deg, #ff94a8, #f56488);
+            border: none;
+            color: white;
+            padding: 8px 20px 8px 35px;
+            border-radius: 0 25px 25px 0;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(245, 100, 136, 0.3);
+            display: inline-block;
+            text-decoration: none;
+        }
+        .arrow-btn::before {
+            content: '';
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-right: 15px solid #ff94a8;
+        }
+        .arrow-btn:hover {
+            background: linear-gradient(135deg, #f56488, #ff94a8);
+            transform: translateX(5px);
+            box-shadow: 0 6px 20px rgba(245, 100, 136, 0.4);
+        }
+        .arrow-btn:hover::before {
+            border-right-color: #f56488;
+        }
     </style>
 
 </head>
@@ -35,6 +70,11 @@
 <body>
     
     <div id="auth">
+        <div class="text-start mb-3">
+            <a href="<?= base_url() ?>" class="arrow-btn">
+                <i class="bi bi-arrow-left me-2"></i>Back to Home
+            </a>
+        </div>
         <h2 class="text-center mb-4" style="font-weight: 700; color: #ff94a8;">Ellie Notes Assistant</h2>
         <form id="login-form" action="<?= base_url('login/aksi_login') ?>" method="post">
             <input type="hidden" name="correct_answer" id="correct-answer">

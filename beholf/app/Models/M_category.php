@@ -48,11 +48,15 @@ class M_category extends Model
 
     public function getCategoryWithCount()
     {
-        return $this->select('el_category.*, COUNT(el_notes.id_note) as note_count')
-            ->join('el_notes', 'el_notes.category = el_category.id_category', 'left')
-            ->where('el_category.status_delete', 0)
-            ->where('el_notes.status_delete', 0)
-            ->groupBy('el_category.id_category')
-            ->findAll();
+        $query = "SELECT 
+                    c.*, 
+                    COALESCE(COUNT(n.id_note), 0) as note_count
+                  FROM el_category c
+                  LEFT JOIN el_notes n ON n.category = c.id_category AND n.status_delete = 0
+                  WHERE c.status_delete = 0
+                  GROUP BY c.id_category
+                  ORDER BY c.name ASC";
+        
+        return $this->db->query($query)->getResult();
     }
 }

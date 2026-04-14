@@ -11,11 +11,7 @@ class Category extends BaseController
             $M_category = new M_category();
             $data = [
                 'title' => 'Data Category',
-                'category' => $M_category
-                    ->where('status_delete', 0)
-                    ->orderBy('name', 'ASC')
-                    ->asObject()
-                    ->findAll()
+                'category' => $M_category->getCategoryWithCount()
             ];
 
             echo view('header', $data);

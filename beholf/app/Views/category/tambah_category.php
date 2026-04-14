@@ -25,7 +25,7 @@
                         <h4 class="card-title">Category Information</h4>
                     </div>
                     <div class="card-body">
-                        <form action="<?= base_url('category/aksi_tambah_category') ?>" method="post">
+                        <form action="<?= base_url('category/simpan_category') ?>" method="post">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group mb-3">

@@ -25,7 +25,7 @@
                         <h4 class="card-title">Category Information</h4>
                     </div>
                     <div class="card-body">
-                        <form action="<?= base_url('category/update_category/' . $category->id_category) ?>" method="post">
+                        <form action="<?= base_url('category/update/' . $category->id_category) ?>" method="post">
                             <input type="hidden" name="id_category" value="<?= $category->id_category ?>">
                             
                             <div class="row">

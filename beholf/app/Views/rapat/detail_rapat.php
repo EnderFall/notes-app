@@ -1,7 +1,7 @@
 <style>
     /* Notes App Modern Design */
     .note-header {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: #9E6247;
         color: white;
         padding: 2rem;
         border-radius: 12px 12px 0 0;
@@ -10,6 +10,7 @@
 
     .note-title {
         font-size: 2rem;
+        color: #fff;
         font-weight: 700;
         margin-bottom: 0.5rem;
     }
@@ -30,7 +31,7 @@
     }
 
     .metadata-item i {
-        color: #667eea;
+        color: #9E6247;
         font-size: 1.1rem;
     }
 
@@ -108,11 +109,95 @@
         font-weight: 600;
     }
 
-    .collapsible-section {
-        border: 1px solid #e9ecef;
-        border-radius: 8px;
+    /* Dropdown Navigation Styles */
+    .section-dropdown {
+        background: #9E6247;
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        position: sticky;
+        top: 20px;
+        z-index: 100;
+    }
+
+    .section-dropdown h5 {
+        color: white;
         margin-bottom: 1rem;
-        overflow: hidden;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .section-dropdown select {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: none;
+        border-radius: 8px;
+        background: white;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #333;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .section-dropdown select:hover {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-dropdown select:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+    }
+
+    .section-content {
+        display: none;
+        animation: fadeIn 0.3s ease-in;
+    }
+
+    .section-content.active {
+        display: block;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-indicator {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        margin-left: auto;
+    }
+
+    /* Hide original collapsible headers */
+    .collapsible-section .note-section-header {
+        display: none;
+    }
+
+    /* Show sections as full cards when active */
+    .collapsible-section {
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        overflow: visible;
+    }
+
+    .collapsible-section .section-content {
+        display: none;
+        padding: 1.5rem;
+        background: white;
+        border-radius: 12px;
+    }
+
+    .collapsible-section .section-content.active {
+        display: block;
     }
 
     /* Keyword highlighting */
@@ -510,7 +595,7 @@ if ($form) {
 
             <!-- Main Note Content -->
             <div class="note-content">
-                <h5 class="mb-3" style="color: #667eea; font-weight: 600;">
+                <h5 class="mb-3" style="color: #9E6247; font-weight: 600;">
                     <i class="bi bi-file-text"></i> Isi Catatan
                 </h5>
                 <?php if (!empty($rapat->content)): ?>
@@ -531,6 +616,31 @@ if ($form) {
     }
     ?>
 
+    <!-- Section Navigation Dropdown -->
+    <div class="section-dropdown">
+        <h5>
+            <i class="bi bi-list-ul"></i> 
+            Navigasi Fitur
+            <span class="section-indicator" id="sectionIndicator">Pilih Fitur</span>
+        </h5>
+        <select id="sectionSelector" onchange="showSection(this.value)">
+            <option value="">-- Pilih Fitur untuk Dibuka --</option>
+            <?php if (!empty($pesertaByDivisi)): ?>
+            <option value="participantsSection">👥 Peserta yang Terdaftar (<?= count($peserta) ?>)</option>
+            <?php endif; ?>
+            <?php if ($can_approve): ?>
+            <option value="aiSection">💡 AI Ringkasan & Analisis</option>
+            <option value="transcriptionSection">🎤 Speech-to-Text & Transkrip</option>
+            <?php endif; ?>
+            <option value="summarySection">📝 Smart Summaries</option>
+            <option value="flashSection">🎴 Flash Cards</option>
+            <option value="highlightSection">📑 Highlights</option>
+            <option value="structureSection">🔧 Smart Structure</option>
+            <option value="termsSection">📚 Scientific Term Lookup</option>
+            <option value="relatedSection">🔗 Related Notes</option>
+        </select>
+    </div>
+
     <!-- Participants Section -->
     <?php if (!empty($pesertaByDivisi)): ?>
     <div class="collapsible-section shadow-sm mb-4">
@@ -540,7 +650,7 @@ if ($form) {
                 <i class="bi bi-chevron-down" id="participantsIcon"></i>
             </h5>
         </div>
-        <div id="participantsSection" class="p-3" style="display: none;">
+        <div id="participantsSection" class="section-content">
             <?php foreach ($pesertaByDivisi as $divisi => $listPeserta): ?>
                 <h6 class="mt-3" style="color: #667eea;">
                     <i class="bi bi-building"></i> <?= esc($divisi) ?>
@@ -565,7 +675,7 @@ if ($form) {
                 <i class="bi bi-chevron-down" id="aiIcon"></i>
             </h5>
         </div>
-        <div id="aiSection" class="p-4" style="display: none;">
+        <div id="aiSection" class="section-content">
             <div class="d-grid gap-2">
                 <button type="button" class="btn btn-primary btn-lg" id="summarizeBtn">
                     <i class="bi bi-magic"></i> Ringkas Catatan dengan AI
@@ -620,7 +730,7 @@ if ($form) {
                 <i class="bi bi-chevron-down" id="transcriptionIcon"></i>
             </h5>
         </div>
-        <div id="transcriptionSection" class="p-4" style="display: none;">
+        <div id="transcriptionSection" class="section-content">
             <!-- Speech-to-Text Upload -->
             <form action="<?= base_url('transkrip/upload') ?>" method="post" enctype="multipart/form-data" class="mb-4">
                 <input type="hidden" name="id_rapat" value="<?= esc($rapat->id_note) ?>">
@@ -759,7 +869,7 @@ if ($form) {
                 <i class="bi bi-chevron-down" id="summarySectionIcon"></i>
             </h5>
         </div>
-        <div id="summarySection" class="p-4" style="display:none;">
+        <div id="summarySection" class="section-content">
             <div class="mb-3 d-flex flex-wrap gap-2">
                 <button class="btn btn-primary" onclick="runSummary('short')"><i class="bi bi-lightning"></i> Short</button>
                 <button class="btn btn-info text-white" onclick="runSummary('bullets')"><i class="bi bi-list-ul"></i> Bullet Points</button>
@@ -794,7 +904,7 @@ if ($form) {
                 <i class="bi bi-chevron-down" id="flashSectionIcon"></i>
             </h5>
         </div>
-        <div id="flashSection" class="p-4" style="display:none;">
+        <div id="flashSection" class="section-content">
             <div class="d-flex flex-wrap gap-2 mb-3">
                 <button class="btn btn-primary" onclick="generateFlashCards()"><i class="bi bi-magic"></i> Auto-Generate Cards</button>
                 <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addCardModal"><i class="bi bi-plus-circle"></i> Add Card</button>
@@ -873,7 +983,7 @@ if ($form) {
                 <i class="bi bi-chevron-down" id="highlightSectionIcon"></i>
             </h5>
         </div>
-        <div id="highlightSection" class="p-4" style="display:none;">
+        <div id="highlightSection" class="section-content">
             <p class="text-muted small mb-3">Select any text in the note content above, then click a color below to save it as a highlight.</p>
             <div class="d-flex gap-2 flex-wrap mb-3" id="highlightColorBtns">
                 <button class="btn btn-sm" style="background:#fef08a; border:1px solid #ccc;" onclick="saveHighlight('#fef08a')">Yellow</button>
@@ -897,7 +1007,7 @@ if ($form) {
                 <i class="bi bi-chevron-down" id="structureSectionIcon"></i>
             </h5>
         </div>
-        <div id="structureSection" class="p-4" style="display:none;">
+        <div id="structureSection" class="section-content">
             <button class="btn btn-primary mb-3" onclick="extractStructure()"><i class="bi bi-magic"></i> Extract Structure</button>
             <div id="structureLoader" class="text-center my-3" style="display:none;">
                 <div class="spinner-border text-primary" role="status"></div>
@@ -934,7 +1044,7 @@ if ($form) {
                 <i class="bi bi-chevron-down" id="termsSectionIcon"></i>
             </h5>
         </div>
-        <div id="termsSection" class="p-4" style="display:none;">
+        <div id="termsSection" class="section-content">
             <p class="text-muted small mb-3">Select a word in the note above and click "Explain Selected", or type any term below.</p>
             <div class="input-group mb-3">
                 <input type="text" id="termInput" class="form-control" placeholder="Type a scientific term…">
@@ -970,7 +1080,7 @@ if ($form) {
                 <i class="bi bi-chevron-down" id="relatedSectionIcon"></i>
             </h5>
         </div>
-        <div id="relatedSection" class="p-4" style="display:none;">
+        <div id="relatedSection" class="section-content">
             <p class="text-muted small mb-3">Notes automatically matched by category, tags, and keywords.</p>
             <div id="relatedLoader" class="text-center my-3" style="display:none;">
                 <div class="spinner-border text-primary" role="status"></div>
@@ -1099,15 +1209,146 @@ function toggleSection(sectionId) {
     const section = document.getElementById(sectionId);
     const icon = document.getElementById(sectionId.replace('Section', 'Icon'));
     
-    if (section.style.display === 'none') {
-        section.style.display = 'block';
-        icon.classList.remove('bi-chevron-down');
-        icon.classList.add('bi-chevron-up');
+    if (section.style.display === 'none' || !section.classList.contains('active')) {
+        // Hide all sections first
+        document.querySelectorAll('.section-content').forEach(s => {
+            s.classList.remove('active');
+        });
+        
+        // Show selected section
+        section.classList.add('active');
+        
+        // Update all icons to down
+        document.querySelectorAll('[id$="Icon"]').forEach(icon => {
+            icon.classList.remove('bi-chevron-up');
+            icon.classList.add('bi-chevron-down');
+        });
+        
+        // Update selected icon to up
+        if (icon) {
+            icon.classList.remove('bi-chevron-down');
+            icon.classList.add('bi-chevron-up');
+        }
+        
+        // Update dropdown
+        const selector = document.getElementById('sectionSelector');
+        if (selector) {
+            selector.value = sectionId;
+        }
+        
+        // Update indicator
+        updateSectionIndicator(sectionId);
     } else {
-        section.style.display = 'none';
+        // Hide section
+        section.classList.remove('active');
+        
+        // Update icon
+        if (icon) {
+            icon.classList.remove('bi-chevron-up');
+            icon.classList.add('bi-chevron-down');
+        }
+        
+        // Reset dropdown
+        const selector = document.getElementById('sectionSelector');
+        if (selector) {
+            selector.value = '';
+        }
+        
+        // Reset indicator
+        updateSectionIndicator('');
+    }
+}
+
+// Show section based on dropdown selection
+function showSection(sectionId) {
+    if (!sectionId) {
+        // Hide all sections
+        document.querySelectorAll('.section-content').forEach(s => {
+            s.classList.remove('active');
+        });
+        
+        // Reset all icons
+        document.querySelectorAll('[id$="Icon"]').forEach(icon => {
+            icon.classList.remove('bi-chevron-up');
+            icon.classList.add('bi-chevron-down');
+        });
+        
+        updateSectionIndicator('');
+        return;
+    }
+    
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+    
+    // Hide all sections first
+    document.querySelectorAll('.section-content').forEach(s => {
+        s.classList.remove('active');
+    });
+    
+    // Show selected section
+    section.classList.add('active');
+    
+    // Update all icons to down
+    document.querySelectorAll('[id$="Icon"]').forEach(icon => {
         icon.classList.remove('bi-chevron-up');
         icon.classList.add('bi-chevron-down');
+    });
+    
+    // Update selected icon to up
+    const icon = document.getElementById(sectionId.replace('Section', 'Icon'));
+    if (icon) {
+        icon.classList.remove('bi-chevron-down');
+        icon.classList.add('bi-chevron-up');
     }
+    
+    // Update indicator
+    updateSectionIndicator(sectionId);
+    
+    // Trigger section-specific loading if needed
+    if (sectionId === 'relatedSection') {
+        setTimeout(() => loadRelatedNotes(), 100);
+    } else if (sectionId === 'summarySection') {
+        setTimeout(() => loadSavedSummaries(), 100);
+    } else if (sectionId === 'flashSection') {
+        setTimeout(() => loadFlashCards(), 100);
+    } else if (sectionId === 'highlightSection') {
+        setTimeout(() => loadSavedHighlights(), 100);
+    } else if (sectionId === 'structureSection') {
+        setTimeout(async () => {
+            const res  = await fetch(BASE + 'note-features/structure/' + NOTE_ID);
+            const data = await res.json();
+            if (data.structure) {
+                const s = data.structure;
+                document.getElementById('structMainIdea').textContent  = s.main_idea || '';
+                document.getElementById('structKeyPoints').textContent  = s.key_points || '';
+                document.getElementById('structSupporting').textContent = s.supporting_details || '';
+                document.getElementById('structConclusion').textContent = s.conclusion || '';
+                document.getElementById('structureResult').style.display = 'block';
+            }
+        }, 100);
+    } else if (sectionId === 'termsSection') {
+        setTimeout(() => loadSavedTerms(), 100);
+    }
+}
+
+// Update section indicator text
+function updateSectionIndicator(sectionId) {
+    const indicator = document.getElementById('sectionIndicator');
+    if (!indicator) return;
+    
+    const sectionNames = {
+        'participantsSection': '👥 Peserta',
+        'aiSection': '💡 AI Ringkasan',
+        'transcriptionSection': '🎤 Speech-to-Text',
+        'summarySection': '📝 Smart Summaries',
+        'flashSection': '🎴 Flash Cards',
+        'highlightSection': '📑 Highlights',
+        'structureSection': '🔧 Smart Structure',
+        'termsSection': '📚 Scientific Terms',
+        'relatedSection': '🔗 Related Notes'
+    };
+    
+    indicator.textContent = sectionNames[sectionId] || 'Pilih Fitur';
 }
 
 // TTS function
@@ -1520,9 +1761,7 @@ async function deleteSummary(id) {
 }
 
 // Load saved summaries when section opens
-document.querySelector('[onclick="toggleSection(\'summarySection\')"]')?.addEventListener('click', function() {
-    setTimeout(loadSavedSummaries, 50);
-});
+// Note: This is now handled by showSection function
 
 // ── FEATURE: FLASH CARDS ─────────────────────────────────────────────────
 let allCards   = [];
@@ -1643,9 +1882,8 @@ async function markDifficulty(diff) {
     nextCard();
 }
 
-document.querySelector('[onclick="toggleSection(\'flashSection\')"]')?.addEventListener('click', function() {
-    setTimeout(loadFlashCards, 50);
-});
+// Load flash cards when section opens
+// Note: This is now handled by showSection function
 
 // ── FEATURE: HIGHLIGHTS ──────────────────────────────────────────────────
 let pendingHighlightText    = '';
@@ -1818,9 +2056,8 @@ async function deleteHighlight(id) {
     loadSavedHighlights();
 }
 
-document.querySelector('[onclick="toggleSection(\'highlightSection\')"]')?.addEventListener('click', function() {
-    setTimeout(loadSavedHighlights, 50);
-});
+// Load highlights when section opens
+// Note: This is now handled by showSection function
 
 // ── FEATURE: STRUCTURE EXTRACTION ────────────────────────────────────────
 async function extractStructure() {
@@ -1843,20 +2080,7 @@ async function extractStructure() {
 }
 
 // Load saved structure when section opens
-document.querySelector('[onclick="toggleSection(\'structureSection\')"]')?.addEventListener('click', async function() {
-    setTimeout(async () => {
-        const res  = await fetch(BASE + 'note-features/structure/' + NOTE_ID);
-        const data = await res.json();
-        if (data.structure) {
-            const s = data.structure;
-            document.getElementById('structMainIdea').textContent  = s.main_idea || '';
-            document.getElementById('structKeyPoints').textContent  = s.key_points || '';
-            document.getElementById('structSupporting').textContent = s.supporting_details || '';
-            document.getElementById('structConclusion').textContent = s.conclusion || '';
-            document.getElementById('structureResult').style.display = 'block';
-        }
-    }, 50);
-});
+// Note: This is now handled by showSection function
 
 // ── FEATURE: SCIENTIFIC TERM LOOKUP ──────────────────────────────────────
 async function lookupTerm() {
@@ -1912,9 +2136,8 @@ async function loadSavedTerms() {
     } catch(e) {}
 }
 
-document.querySelector('[onclick="toggleSection(\'termsSection\')"]')?.addEventListener('click', function() {
-    setTimeout(loadSavedTerms, 50);
-});
+// Load terms when section opens
+// Note: This is now handled by showSection function
 
 // ── Helpers ───────────────────────────────────────────────────────────────
 function escHtml(s) {
